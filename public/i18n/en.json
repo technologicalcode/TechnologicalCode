@@ -7,7 +7,9 @@
       "process": "PROCESS"
     },
     "cta": "GET STARTED",
-    "lang": { "label": "Language" },
+    "lang": {
+      "label": "Language"
+    },
     "theme": {
       "light": "Switch to light theme",
       "dark": "Switch to dark theme"
@@ -15,7 +17,9 @@
   },
   "hero": {
     "badge": "SYSTEM STATUS / OPTIMAL",
-    "title": { "prefix": "We build software that" },
+    "title": {
+      "prefix": "We build software that"
+    },
     "lead": "Innovation meets purpose. Technology should empower you, not hold you back.",
     "cta": {
       "primary": "START YOUR PROJECT",
@@ -27,10 +31,20 @@
     "title": "KEY COMPETENCIES",
     "leftBody": {
       "parts": [
-        { "text": "In a world that evolves every second, moving forward with " },
-        { "text": "technology", "accent": "1" },
-        { "text": " is no longer optional — it is a " },
-        { "text": "necessity", "accent": "1" }
+        {
+          "text": "In a world that evolves every second, moving forward with "
+        },
+        {
+          "text": "technology",
+          "accent": "1"
+        },
+        {
+          "text": " is no longer optional — it is a "
+        },
+        {
+          "text": "necessity",
+          "accent": "1"
+        }
       ]
     },
     "rightBody": "That's why TechnologicalCode exists: to empower modern businesses.",
@@ -80,10 +94,20 @@
     "aria": "Internal systems and scalability",
     "leftBody": {
       "parts": [
-        { "text": "Internal systems with " },
-        { "text": "modern", "accent": "1" },
-        { "text": " structures and " },
-        { "text": "scalability", "accent": "1" }
+        {
+          "text": "Internal systems with "
+        },
+        {
+          "text": "modern",
+          "accent": "1"
+        },
+        {
+          "text": " structures and "
+        },
+        {
+          "text": "scalability",
+          "accent": "1"
+        }
       ]
     },
     "rightBody": "Everything your business needs to take off",
@@ -100,34 +124,86 @@
     "imgAlt": "Artificial intelligence applied to your business",
     "title": {
       "parts": [
-        { "text": "With " },
-        { "text": "the evolution of AI", "accent": "1" },
-        { "text": ", it's time for " },
-        { "text": "your business", "accent": "1" },
-        { "text": " to " },
-        { "text": "evolve", "accent": "1" },
-        { "text": " too." }
+        {
+          "text": "With "
+        },
+        {
+          "text": "the evolution of AI",
+          "accent": "1"
+        },
+        {
+          "text": ", it's time for "
+        },
+        {
+          "text": "your business",
+          "accent": "1"
+        },
+        {
+          "text": " to "
+        },
+        {
+          "text": "evolve",
+          "accent": "1"
+        },
+        {
+          "text": " too."
+        }
       ]
     },
     "body": {
       "parts": [
-        { "text": "Improve your business " },
-        { "text": "performance", "accent": "1" },
-        { "text": " with the help of " },
-        { "text": "AI", "accent": "1" },
-        { "text": " !LET'S WORK TOGETHER!" }
+        {
+          "text": "Improve your business "
+        },
+        {
+          "text": "performance",
+          "accent": "1"
+        },
+        {
+          "text": " with the help of "
+        },
+        {
+          "text": "AI",
+          "accent": "1"
+        },
+        {
+          "text": " !LET'S WORK TOGETHER!"
+        }
       ]
     },
     "cta": "Contact us"
   },
   "hook": {
     "aria": "Hook section",
+    "ctaQuote": "Get a quote",
     "text": {
       "parts": [
-        { "text": "Work with us with " },
-        { "text": "different payment methods", "accent": "1" },
-        { "text": " for our variety of services." }
+        {
+          "text": "Work with us with "
+        },
+        {
+          "text": "different payment methods",
+          "accent": "1"
+        },
+        {
+          "text": " for our variety of services."
+        }
       ]
+    }
+  },
+  "cotizaPage": {
+    "title": "Get a project quote",
+    "back": "← Back to home",
+    "lead": "You’ll be able to share your project details here. We’ll add the form soon.",
+    "serviceType": {
+      "title": "Choose the type of service you need",
+      "ariaLabel": "Service type",
+      "options": {
+        "website": "Website",
+        "webApp": "Web app",
+        "aiImplementation": "AI implementation"
+      },
+      "continue": "Continue"
     }
   },
   "cta": {

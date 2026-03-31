@@ -1,0 +1,169 @@
+.cotiza {
+  box-sizing: border-box;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  padding: clamp(1rem, 3vw, 1.5rem);
+  background-color: var(--color-tc-bg);
+  color: var(--color-tc-text);
+}
+
+.cotiza__top {
+  flex-shrink: 0;
+}
+
+.cotiza__back {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  color: var(--color-tc-muted);
+  transition: color 0.2s ease;
+}
+
+.cotiza__back:hover {
+  color: var(--color-tc-text);
+}
+
+.cotiza__main {
+  flex: 1;
+  display: flex;
+  max-width: 48rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-inline: auto;
+  width: 100%;
+  padding-block: 2rem;
+}
+
+.cotiza__section {
+  width: min(100%, 42rem);
+}
+
+.cotiza__heading {
+  margin: 0 0 1rem;
+  text-align: center;
+  font-size: clamp(1.55rem, 3.5vw, 2.2rem);
+  line-height: 1.2;
+}
+
+.cotiza__options-stack {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 0.9rem;
+}
+
+.cotiza__options-card {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  gap: 0.8rem;
+  width: 100%;
+  padding: clamp(1rem, 2vw, 1.25rem);
+  border-radius: 18px;
+  background: color-mix(in srgb, var(--color-tc-bg) 92%, white 8%);
+  border: 1px solid color-mix(in srgb, var(--color-tc-muted) 28%, transparent);
+  box-shadow: 0 22px 52px -28px rgba(0, 0, 0, 0.45);
+}
+
+.cotiza__option {
+  display: block;
+  cursor: pointer;
+}
+
+.cotiza__radio {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.cotiza__option-content {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid color-mix(in srgb, var(--color-tc-muted) 35%, transparent);
+  background-color: color-mix(in srgb, var(--color-tc-bg) 95%, white 5%);
+  padding: 0.85rem 1rem;
+  font-weight: 600;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.cotiza__option:hover .cotiza__option-content {
+  transform: translateY(-1px);
+}
+
+.cotiza__radio:focus-visible + .cotiza__option-content {
+  outline: 2px solid color-mix(in srgb, var(--color-tc-primary) 65%, white 35%);
+  outline-offset: 2px;
+}
+
+.cotiza__radio:checked + .cotiza__option-content {
+  border-color: var(--color-tc-primary);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-tc-primary) 30%, transparent);
+}
+
+.cotiza__continue-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  margin-top: 0.65rem;
+  width: 100%;
+  min-height: 3rem;
+
+  border-radius: 14px;
+  padding: 0.8rem 1rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #fff;
+  background:
+    linear-gradient(120deg, rgba(122, 233, 255, 0.2), rgba(0, 0, 0, 0) 32%),
+    linear-gradient(135deg, #3f64ff 0%, #18a0ff 45%, #14e7ff 100%);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-140%);
+  transition: filter 0.2s ease, transform 0.35s ease, opacity 0.35s ease, box-shadow 0.2s ease;
+}
+
+.cotiza__continue-btn::before {
+  content: '';
+  position: absolute;
+  inset: 1px;
+  border-radius: 12px;
+
+  pointer-events: none;
+}
+
+.cotiza__continue-btn::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 14px;
+
+  pointer-events: none;
+}
+
+.cotiza__options-stack--active .cotiza__continue-btn {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.cotiza__continue-btn:not(:disabled):hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+  cursor: pointer;
+}
+
+.cotiza__continue-btn:disabled {
+  opacity: 0.42;
+  filter: grayscale(0.2) saturate(0.7);
+  cursor: not-allowed;
+}

@@ -7,7 +7,9 @@
       "process": "PROCESO"
     },
     "cta": "COMENZAR",
-    "lang": { "label": "Idioma" },
+    "lang": {
+      "label": "Idioma"
+    },
     "theme": {
       "light": "Cambiar a tema claro",
       "dark": "Cambiar a tema oscuro"
@@ -15,7 +17,9 @@
   },
   "hero": {
     "badge": "ESTADO DEL SISTEMA / ÓPTIMO",
-    "title": { "prefix": "Construimos software que" },
+    "title": {
+      "prefix": "Construimos software que"
+    },
     "lead": "La innovación se une al propósito. La tecnología debe empoderarte, no frenarte.",
     "cta": {
       "primary": "INICIA TU PROYECTO",
@@ -27,10 +31,20 @@
     "title": "COMPETENCIAS CLAVE",
     "leftBody": {
       "parts": [
-        { "text": "En un mundo que evoluciona cada segundo, avanzar con la " },
-        { "text": "tecnología", "accent": "1" },
-        { "text": " ya no es opcional es una " },
-        { "text": "necesidad", "accent": "1" }
+        {
+          "text": "En un mundo que evoluciona cada segundo, avanzar con la "
+        },
+        {
+          "text": "tecnología",
+          "accent": "1"
+        },
+        {
+          "text": " ya no es opcional es una "
+        },
+        {
+          "text": "necesidad",
+          "accent": "1"
+        }
       ]
     },
     "rightBody": "Por eso existe TechnologicalCode: para impulsar negocios modernos.",
@@ -80,10 +94,20 @@
     "aria": "Sistemas internos y escalabilidad",
     "leftBody": {
       "parts": [
-        { "text": "Sistemas internos con estructuras " },
-        { "text": "modernas", "accent": "1" },
-        { "text": " y " },
-        { "text": "escalabilidad", "accent": "1" }
+        {
+          "text": "Sistemas internos con estructuras "
+        },
+        {
+          "text": "modernas",
+          "accent": "1"
+        },
+        {
+          "text": " y "
+        },
+        {
+          "text": "escalabilidad",
+          "accent": "1"
+        }
       ]
     },
     "rightBody": "Todo lo que tu negocio necesita para explotar",
@@ -100,34 +124,86 @@
     "imgAlt": "Inteligencia artificial aplicada al negocio",
     "title": {
       "parts": [
-        { "text": "Con " },
-        { "text": "la evolución de la IA", "accent": "1" },
-        { "text": " es momento de que " },
-        { "text": "tu negocio", "accent": "1" },
-        { "text": " también " },
-        { "text": "evolucione", "accent": "1" },
-        { "text": "." }
+        {
+          "text": "Con "
+        },
+        {
+          "text": "la evolución de la IA",
+          "accent": "1"
+        },
+        {
+          "text": " es momento de que "
+        },
+        {
+          "text": "tu negocio",
+          "accent": "1"
+        },
+        {
+          "text": " también "
+        },
+        {
+          "text": "evolucione",
+          "accent": "1"
+        },
+        {
+          "text": "."
+        }
       ]
     },
     "body": {
       "parts": [
-        { "text": "Mejora el " },
-        { "text": "rendimiento", "accent": "1" },
-        { "text": " de tu negocio con ayuda de la " },
-        { "text": "IA", "accent": "1" },
-        { "text": " !TRABAJEMOS JUNTOS!" }
+        {
+          "text": "Mejora el "
+        },
+        {
+          "text": "rendimiento",
+          "accent": "1"
+        },
+        {
+          "text": " de tu negocio con ayuda de la "
+        },
+        {
+          "text": "IA",
+          "accent": "1"
+        },
+        {
+          "text": " !TRABAJEMOS JUNTOS!"
+        }
       ]
     },
     "cta": "Contáctanos"
   },
   "hook": {
     "aria": "Sección gancho",
+    "ctaQuote": "Cotiza tu proyecto",
     "text": {
       "parts": [
-        { "text": "Trabaja con nosotros con " },
-        { "text": "distintas formas de pago", "accent": "1" },
-        { "text": " para nuestra variedad de servicios." }
+        {
+          "text": "Trabaja con nosotros con "
+        },
+        {
+          "text": "distintas formas de pago",
+          "accent": "1"
+        },
+        {
+          "text": " para nuestra variedad de servicios."
+        }
       ]
+    }
+  },
+  "cotizaPage": {
+    "title": "Cotiza tu proyecto",
+    "back": "← Volver al inicio",
+    "lead": "Aquí podrás completar los detalles de tu proyecto. Muy pronto añadiremos el formulario.",
+    "serviceType": {
+      "title": "Escoge el tipo de servicio necesitas",
+      "ariaLabel": "Tipo de servicio",
+      "options": {
+        "website": "Sitio web",
+        "webApp": "App web",
+        "aiImplementation": "Implementacion de IA"
+      },
+      "continue": "Continuar"
     }
   },
   "cta": {

@@ -1,0 +1,39 @@
+<div class="cotiza">
+  <main class="cotiza__main">
+    <section class="cotiza__section">
+      <h1 class="cotiza__heading">{{ 'cotizaPage.serviceType.title' | translate }}</h1>
+
+      <div
+        class="cotiza__options-stack"
+        [class.cotiza__options-stack--active]="sectionTypeButton()"
+      >
+        <div
+          class="cotiza__options-card"
+          role="radiogroup"
+          [attr.aria-label]="'cotizaPage.serviceType.ariaLabel' | translate"
+        >
+          @for (service of servicesType(); track service.type) {
+            <label class="cotiza__option">
+              <input
+                class="cotiza__radio"
+                type="radio"
+                name="serviceType"
+                [value]="service.type"
+                [checked]="selectedServiceType()?.type === service.type"
+                (click)="toggleServiceType(service, $event)"
+              />
+              <span class="cotiza__option-content">
+                <img [src]="service.icon" alt="" width="32" height="32" />
+                <span>{{ service.labelKey | translate }}</span>
+              </span>
+            </label>
+          }
+        </div>
+
+        <button class="cotiza__continue-btn" type="button" [disabled]="!sectionTypeButton()">
+          {{ 'cotizaPage.serviceType.continue' | translate }}
+        </button>
+      </div>
+    </section>
+  </main>
+</div>

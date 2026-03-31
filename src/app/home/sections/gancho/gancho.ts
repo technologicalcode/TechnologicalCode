@@ -15,6 +15,7 @@ import {
 import { ActiveLanguage } from '../../../locale/active-language';
 import { sectionIntersectsHeaderZone } from '../../../layout/header-zone-geometry';
 import { HeaderZoneService } from '../../../layout/header-zone.service';
+import { RouterLink } from '@angular/router';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 type HookTextPart = { text: string; accent?: boolean | string };
@@ -22,7 +23,7 @@ type HookTextPart = { text: string; accent?: boolean | string };
 @Component({
   selector: 'app-gancho-section',
   standalone: true,
-  imports: [TranslatePipe],
+  imports: [RouterLink, TranslatePipe],
   templateUrl: './gancho.html',
   styleUrl: './gancho.css',
 })
