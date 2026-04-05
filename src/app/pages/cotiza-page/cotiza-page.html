@@ -1,39 +1,639 @@
 <div class="cotiza">
-  <main class="cotiza__main">
-    <section class="cotiza__section">
-      <h1 class="cotiza__heading">{{ 'cotizaPage.serviceType.title' | translate }}</h1>
-
-      <div
-        class="cotiza__options-stack"
-        [class.cotiza__options-stack--active]="sectionTypeButton()"
-      >
+  <main class="cotiza__wizard-main">
+    <div
+      class="cotiza__slide-viewport"
+      [style.--cotiza-step]="passed()"
+      role="region"
+      [attr.aria-label]="'cotizaPage.title' | translate"
+    >
+      <div class="cotiza__slide-track">
+        <!-- Paso 0: tipo de servicio -->
         <div
-          class="cotiza__options-card"
-          role="radiogroup"
-          [attr.aria-label]="'cotizaPage.serviceType.ariaLabel' | translate"
+          class="cotiza__slide-panel"
+          [attr.aria-hidden]="passed() !== 0"
         >
-          @for (service of servicesType(); track service.type) {
-            <label class="cotiza__option">
-              <input
-                class="cotiza__radio"
-                type="radio"
-                name="serviceType"
-                [value]="service.type"
-                [checked]="selectedServiceType()?.type === service.type"
-                (click)="toggleServiceType(service, $event)"
-              />
-              <span class="cotiza__option-content">
-                <img [src]="service.icon" alt="" width="32" height="32" />
-                <span>{{ service.labelKey | translate }}</span>
-              </span>
-            </label>
-          }
+          <div class="cotiza__slide-panel-inner cotiza__slide-panel-inner--first">
+            <div class="cotiza__slide-panel-body">
+              <h1 class="cotiza__heading">{{ 'cotizaPage.serviceType.title' | translate }}</h1>
+              <div
+                class="cotiza__options-stack"
+                [class.cotiza__options-stack--active]="passed() === 0 && sectionTypeButton()"
+              >
+                <div
+                  class="cotiza__options-card"
+                  role="radiogroup"
+                  [attr.aria-label]="'cotizaPage.serviceType.ariaLabel' | translate"
+                >
+                  @for (service of stepServiceOptions; track service.type) {
+                    <label class="cotiza__option">
+                      <input
+                        class="cotiza__radio"
+                        type="radio"
+                        name="cotiza-step-0"
+                        [value]="service.type"
+                        [checked]="selectedServiceType()?.type === service.type"
+                        (click)="toggleServiceType(service, $event)"
+                      />
+                      <span class="cotiza__option-content">
+                        <img
+                          class="cotiza__option-icon"
+                          [src]="service.icon"
+                          alt=""
+                          width="32"
+                          height="32"
+                          [style.color]="service.color"
+                        />
+                        <span>{{ service.labelKey | translate }}</span>
+                      </span>
+                    </label>
+                  }
+                </div>
+                <button
+                  class="cotiza__continue-btn"
+                  type="button"
+                  [disabled]="passed() !== 0 || !sectionTypeButton()"
+                  (click)="nextPassed()"
+                >
+                  {{ 'cotizaPage.serviceType.continue' | translate }}
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <button class="cotiza__continue-btn" type="button" [disabled]="!sectionTypeButton()">
-          {{ 'cotizaPage.serviceType.continue' | translate }}
-        </button>
+        <!-- Paso 1: tamaño -->
+        <div
+          class="cotiza__slide-panel"
+          [attr.aria-hidden]="passed() !== 1"
+        >
+          <div class="cotiza__slide-panel-inner">
+            <button
+              type="button"
+              class="cotiza__wizard-back cotiza__wizard-back--panel"
+              (click)="previousPassed()"
+            >
+              {{ 'cotizaPage.wizard.backStep' | translate }}
+            </button>
+            <div class="cotiza__slide-panel-body">
+              <h1 class="cotiza__heading">{{ 'cotizaPage.companySize.title' | translate }}</h1>
+              <div
+                class="cotiza__options-stack"
+                [class.cotiza__options-stack--active]="passed() === 1 && sectionTypeButton()"
+              >
+                <div
+                  class="cotiza__options-card"
+                  role="radiogroup"
+                  [attr.aria-label]="'cotizaPage.companySize.ariaLabel' | translate"
+                >
+                  @for (service of stepCompanySizeOptions; track service.type) {
+                    <label class="cotiza__option">
+                      <input
+                        class="cotiza__radio"
+                        type="radio"
+                        name="cotiza-step-1"
+                        [value]="service.type"
+                        [checked]="selectedServiceType()?.type === service.type"
+                        (click)="toggleServiceType(service, $event)"
+                      />
+                      <span class="cotiza__option-content">
+                        <img
+                          class="cotiza__option-icon"
+                          [src]="service.icon"
+                          alt=""
+                          width="32"
+                          height="32"
+                          [style.color]="service.color"
+                        />
+                        <span>{{ service.labelKey | translate }}</span>
+                      </span>
+                    </label>
+                  }
+                </div>
+                <button
+                  class="cotiza__continue-btn"
+                  type="button"
+                  [disabled]="passed() !== 1 || !sectionTypeButton()"
+                  (click)="nextPassed()"
+                >
+                  {{ 'cotizaPage.serviceType.continue' | translate }}
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Paso 2: presupuesto -->
+        <div
+          class="cotiza__slide-panel"
+          [attr.aria-hidden]="passed() !== 2"
+        >
+          <div class="cotiza__slide-panel-inner">
+            <button
+              type="button"
+              class="cotiza__wizard-back cotiza__wizard-back--panel"
+              (click)="previousPassed()"
+            >
+              {{ 'cotizaPage.wizard.backStep' | translate }}
+            </button>
+            <div class="cotiza__slide-panel-body">
+              <h1 class="cotiza__heading">{{ 'cotizaPage.budget.title' | translate }}</h1>
+              <div
+                class="cotiza__options-stack"
+                [class.cotiza__options-stack--active]="passed() === 2 && sectionTypeButton()"
+              >
+                <div
+                  class="cotiza__options-card"
+                  role="radiogroup"
+                  [attr.aria-label]="'cotizaPage.budget.ariaLabel' | translate"
+                >
+                  @for (service of stepBudgetOptions; track service.type) {
+                    <label class="cotiza__option">
+                      <input
+                        class="cotiza__radio"
+                        type="radio"
+                        name="cotiza-step-2"
+                        [value]="service.type"
+                        [checked]="selectedServiceType()?.type === service.type"
+                        (click)="toggleServiceType(service, $event)"
+                      />
+                      <span class="cotiza__option-content">
+                        <img
+                          class="cotiza__option-icon"
+                          [src]="service.icon"
+                          alt=""
+                          width="32"
+                          height="32"
+                          [style.color]="service.color"
+                        />
+                        <span>{{ service.labelKey | translate }}</span>
+                      </span>
+                    </label>
+                  }
+                </div>
+                <button
+                  class="cotiza__continue-btn"
+                  type="button"
+                  [disabled]="passed() !== 2 || !sectionTypeButton()"
+                  (click)="nextPassed()"
+                >
+                  {{ 'cotizaPage.serviceType.continue' | translate }}
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Paso 3: cuéntanos qué necesitas -->
+        <div
+          class="cotiza__slide-panel"
+          [attr.aria-hidden]="passed() !== 3"
+        >
+          <div class="cotiza__slide-panel-inner">
+            <button
+              type="button"
+              class="cotiza__wizard-back cotiza__wizard-back--panel"
+              (click)="previousPassed()"
+            >
+              {{ 'cotizaPage.wizard.backStep' | translate }}
+            </button>
+            <div class="cotiza__slide-panel-body">
+              <h1 class="cotiza__heading">{{ 'cotizaPage.details.title' | translate }}</h1>
+              <div
+                class="cotiza__options-stack cotiza__options-stack--details"
+                [class.cotiza__options-stack--active]="passed() === 3"
+              >
+                <div class="cotiza__details-card">
+                  <textarea
+                    id="cotiza-project-details"
+                    class="cotiza__details-textarea"
+                    rows="6"
+                    [value]="projectDetailsText()"
+                    (input)="onDetailsInput($event)"
+                    [attr.placeholder]="'cotizaPage.details.placeholder' | translate"
+                    [attr.aria-label]="'cotizaPage.details.ariaLabel' | translate"
+                  ></textarea>
+                </div>
+                <button
+                  class="cotiza__continue-btn"
+                  type="button"
+                  [disabled]="passed() !== 3"
+                  (click)="nextPassed()"
+                >
+                  {{ 'cotizaPage.serviceType.continue' | translate }}
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Paso 4: funcionalidades -->
+        <div
+          class="cotiza__slide-panel"
+          [attr.aria-hidden]="passed() !== 4"
+        >
+          <div class="cotiza__slide-panel-inner">
+            <button
+              type="button"
+              class="cotiza__wizard-back cotiza__wizard-back--panel"
+              (click)="previousPassed()"
+            >
+              {{ 'cotizaPage.wizard.backStep' | translate }}
+            </button>
+            <div class="cotiza__slide-panel-body">
+              <h1 class="cotiza__heading">{{ 'cotizaPage.features.title' | translate }}</h1>
+              <div
+                class="cotiza__options-stack cotiza__options-stack--details"
+                [class.cotiza__options-stack--active]="passed() === 4"
+              >
+                <div class="cotiza__details-card">
+                  <textarea
+                    id="cotiza-project-features"
+                    class="cotiza__details-textarea"
+                    rows="6"
+                    [value]="projectFeaturesText()"
+                    (input)="onFeaturesInput($event)"
+                    [attr.placeholder]="'cotizaPage.features.placeholder' | translate"
+                    [attr.aria-label]="'cotizaPage.features.ariaLabel' | translate"
+                  ></textarea>
+                </div>
+                <button
+                  class="cotiza__continue-btn"
+                  type="button"
+                  [disabled]="passed() !== 4"
+                  (click)="nextPassed()"
+                >
+                  {{ 'cotizaPage.serviceType.continue' | translate }}
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Paso 5: integración API (Sí → textarea requisitos; No → solo continuar; referencias en paso 6) -->
+        <div
+          class="cotiza__slide-panel"
+          [attr.aria-hidden]="passed() !== 5"
+        >
+          <div class="cotiza__slide-panel-inner">
+            <button
+              type="button"
+              class="cotiza__wizard-back cotiza__wizard-back--panel"
+              (click)="previousPassed()"
+            >
+              {{ 'cotizaPage.wizard.backStep' | translate }}
+            </button>
+            <div class="cotiza__slide-panel-body">
+              <h1 class="cotiza__heading cotiza__heading--required">
+                {{ 'cotizaPage.apiIntegration.title' | translate }}
+              </h1>
+              <div
+                class="cotiza__options-stack cotiza__options-stack--details cotiza__options-stack--api"
+              >
+                <div
+                  class="cotiza__options-card"
+                  role="radiogroup"
+                  [attr.aria-label]="'cotizaPage.apiIntegration.ariaLabel' | translate"
+                >
+                  @for (opt of stepApiBinaryOptions; track opt.type) {
+                    <label
+                      class="cotiza__option"
+                      (click)="
+                        pickApiIntegration(opt.type === 'api-yes' ? 'yes' : 'no', $event)
+                      "
+                    >
+                      <input
+                        class="cotiza__radio"
+                        type="radio"
+                        name="cotiza-step-5-api"
+                        [value]="opt.type"
+                        [checked]="
+                          (opt.type === 'api-yes' && isApiChoiceChecked('yes')) ||
+                          (opt.type === 'api-no' && isApiChoiceChecked('no'))
+                        "
+                        tabindex="-1"
+                      />
+                      <span class="cotiza__option-content">
+                        <img
+                          class="cotiza__option-icon"
+                          [src]="opt.icon"
+                          alt=""
+                          width="32"
+                          height="32"
+                          [style.color]="opt.color"
+                        />
+                        <span>{{ opt.labelKey | translate }}</span>
+                      </span>
+                    </label>
+                  }
+                </div>
+
+                @if (apiIntegrationChoice() === 'yes') {
+                  <div class="cotiza__details-card cotiza__details-card--api-branch">
+                    <label class="cotiza__api-branch-label" for="cotiza-api-requirements">
+                      {{ 'cotizaPage.apiIntegration.requirementsTitle' | translate }}
+                    </label>
+                    <textarea
+                      id="cotiza-api-requirements"
+                      class="cotiza__details-textarea"
+                      rows="5"
+                      [value]="apiRequirementsText()"
+                      (input)="onApiRequirementsInput($event)"
+                      [attr.placeholder]="'cotizaPage.apiIntegration.requirementsPlaceholder' | translate"
+                      [attr.aria-label]="'cotizaPage.apiIntegration.requirementsAria' | translate"
+                    ></textarea>
+                  </div>
+                  <button
+                    type="button"
+                    class="cotiza__continue-btn cotiza__continue-btn--below-card"
+                    (click)="nextPassed()"
+                  >
+                    {{ 'cotizaPage.serviceType.continue' | translate }}
+                  </button>
+                }
+
+                @if (apiIntegrationChoice() === 'no') {
+                  <button
+                    type="button"
+                    class="cotiza__continue-btn cotiza__continue-btn--below-card"
+                    (click)="nextPassed()"
+                  >
+                    {{ 'cotizaPage.serviceType.continue' | translate }}
+                  </button>
+                }
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Paso 6: referencias (URLs), después de API -->
+        <div
+          class="cotiza__slide-panel"
+          [attr.aria-hidden]="passed() !== 6"
+        >
+          <div class="cotiza__slide-panel-inner">
+            <button
+              type="button"
+              class="cotiza__wizard-back cotiza__wizard-back--panel"
+              (click)="previousPassed()"
+            >
+              {{ 'cotizaPage.wizard.backStep' | translate }}
+            </button>
+            <div class="cotiza__slide-panel-body">
+              <h1 class="cotiza__heading">{{ 'cotizaPage.references.title' | translate }}</h1>
+              <div
+                class="cotiza__options-stack cotiza__options-stack--details cotiza__options-stack--api"
+              >
+                <div
+                  class="cotiza__details-card cotiza__details-card--api-branch"
+                  role="group"
+                  [attr.aria-label]="'cotizaPage.references.ariaLabel' | translate"
+                >
+                  <p class="cotiza__api-branch-title">
+                    {{ 'cotizaPage.references.lead' | translate }}
+                  </p>
+                  <div class="cotiza__url-fields">
+                    <input
+                      class="cotiza__details-input"
+                      type="url"
+                      id="cotiza-ref-url-0"
+                      [value]="referenceUrls()[0]"
+                      (input)="onReferenceUrlInput(0, $event)"
+                      [attr.placeholder]="'cotizaPage.apiIntegration.urlPlaceholder1' | translate"
+                      [attr.aria-label]="'cotizaPage.apiIntegration.urlAria1' | translate"
+                      inputmode="url"
+                      autocomplete="url"
+                    />
+                    <input
+                      class="cotiza__details-input"
+                      type="url"
+                      id="cotiza-ref-url-1"
+                      [value]="referenceUrls()[1]"
+                      (input)="onReferenceUrlInput(1, $event)"
+                      [attr.placeholder]="'cotizaPage.apiIntegration.urlPlaceholder2' | translate"
+                      [attr.aria-label]="'cotizaPage.apiIntegration.urlAria2' | translate"
+                      inputmode="url"
+                      autocomplete="url"
+                    />
+                    <input
+                      class="cotiza__details-input"
+                      type="url"
+                      id="cotiza-ref-url-2"
+                      [value]="referenceUrls()[2]"
+                      (input)="onReferenceUrlInput(2, $event)"
+                      [attr.placeholder]="'cotizaPage.apiIntegration.urlPlaceholder3' | translate"
+                      [attr.aria-label]="'cotizaPage.apiIntegration.urlAria3' | translate"
+                      inputmode="url"
+                      autocomplete="url"
+                    />
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  class="cotiza__continue-btn cotiza__continue-btn--below-card"
+                  (click)="nextPassed()"
+                >
+                  {{ 'cotizaPage.serviceType.continue' | translate }}
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Paso 7: acuerdo antes de finalizar -->
+        <div
+          class="cotiza__slide-panel"
+          [attr.aria-hidden]="passed() !== 7"
+        >
+          <div class="cotiza__slide-panel-inner">
+            <button
+              type="button"
+              class="cotiza__wizard-back cotiza__wizard-back--panel"
+              (click)="previousPassed()"
+            >
+              {{ 'cotizaPage.wizard.backStep' | translate }}
+            </button>
+            <div class="cotiza__slide-panel-body">
+              <h1 class="cotiza__heading">
+                {{ 'cotizaPage.agreementBeforeContinue.title' | translate }}
+              </h1>
+              <p class="cotiza__agreement-subtitle">
+                {{ 'cotizaPage.agreementBeforeContinue.subtitle' | translate }}
+              </p>
+              <div
+                class="cotiza__options-stack"
+                [class.cotiza__options-stack--active]="passed() === 7 && sectionTypeButton()"
+              >
+                <div
+                  class="cotiza__options-card"
+                  role="radiogroup"
+                  [attr.aria-label]="'cotizaPage.agreementBeforeContinue.ariaLabel' | translate"
+                >
+                  @for (opt of stepAgreementOptions; track opt.type) {
+                    <label class="cotiza__option">
+                      <input
+                        class="cotiza__radio"
+                        type="radio"
+                        name="cotiza-step-7-agreement"
+                        [value]="opt.type"
+                        [checked]="selectedServiceType()?.type === opt.type"
+                        (click)="toggleServiceType(opt, $event)"
+                      />
+                      <span class="cotiza__option-content cotiza__option-content--multiline">
+                        <img
+                          class="cotiza__option-icon"
+                          [src]="opt.icon"
+                          alt=""
+                          width="32"
+                          height="32"
+                          [style.color]="opt.color"
+                        />
+                        <span class="cotiza__option-label-text">{{ opt.labelKey | translate }}</span>
+                      </span>
+                    </label>
+                  }
+                </div>
+                <button
+                  class="cotiza__continue-btn"
+                  type="button"
+                  [disabled]="passed() !== 7 || !sectionTypeButton()"
+                  (click)="nextPassed()"
+                >
+                  {{ 'cotizaPage.serviceType.continue' | translate }}
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Paso 8: datos personales y envío al correo de la empresa -->
+        <div
+          class="cotiza__slide-panel"
+          [attr.aria-hidden]="passed() !== 8"
+        >
+          <div class="cotiza__slide-panel-inner">
+            <button
+              type="button"
+              class="cotiza__wizard-back cotiza__wizard-back--panel"
+              (click)="previousPassed()"
+            >
+              {{ 'cotizaPage.wizard.backStep' | translate }}
+            </button>
+            <div class="cotiza__slide-panel-body">
+              <h1 class="cotiza__heading">{{ 'cotizaPage.contact.title' | translate }}</h1>
+              <p class="cotiza__agreement-subtitle">{{ 'cotizaPage.contact.lead' | translate }}</p>
+              @if (!quoteApiConfigured && !web3formsConfigured) {
+                <p class="cotiza__contact-mailto-hint">{{ 'cotizaPage.contact.mailtoHint' | translate }}</p>
+              }
+              <div
+                class="cotiza__options-stack cotiza__options-stack--details cotiza__options-stack--api"
+              >
+                <div
+                  class="cotiza__details-card cotiza__details-card--api-branch"
+                  role="group"
+                  [attr.aria-label]="'cotizaPage.contact.ariaLabel' | translate"
+                >
+                  <div class="cotiza__url-fields">
+                    <label class="cotiza__contact-field">
+                      <span class="cotiza__contact-label">{{ 'cotizaPage.contact.firstName' | translate }}</span>
+                      <input
+                        class="cotiza__details-input"
+                        type="text"
+                        id="cotiza-contact-first-name"
+                        name="firstName"
+                        autocomplete="given-name"
+                        [value]="contactFirstName()"
+                        (input)="onContactFirstNameInput($event)"
+                        [attr.placeholder]="'cotizaPage.contact.placeholderFirstName' | translate"
+                        [attr.aria-label]="'cotizaPage.contact.firstName' | translate"
+                      />
+                    </label>
+                    <label class="cotiza__contact-field">
+                      <span class="cotiza__contact-label">{{ 'cotizaPage.contact.lastName' | translate }}</span>
+                      <input
+                        class="cotiza__details-input"
+                        type="text"
+                        id="cotiza-contact-last-name"
+                        name="lastName"
+                        autocomplete="family-name"
+                        [value]="contactLastName()"
+                        (input)="onContactLastNameInput($event)"
+                        [attr.placeholder]="'cotizaPage.contact.placeholderLastName' | translate"
+                        [attr.aria-label]="'cotizaPage.contact.lastName' | translate"
+                      />
+                    </label>
+                    <label class="cotiza__contact-field">
+                      <span class="cotiza__contact-label">{{ 'cotizaPage.contact.email' | translate }}</span>
+                      <input
+                        class="cotiza__details-input"
+                        type="email"
+                        id="cotiza-contact-email"
+                        name="email"
+                        autocomplete="email"
+                        [value]="contactEmail()"
+                        (input)="onContactEmailInput($event)"
+                        [attr.placeholder]="'cotizaPage.contact.placeholderEmail' | translate"
+                        [attr.aria-label]="'cotizaPage.contact.email' | translate"
+                        inputmode="email"
+                      />
+                    </label>
+                    <label class="cotiza__contact-field">
+                      <span class="cotiza__contact-label">{{ 'cotizaPage.contact.phone' | translate }}</span>
+                      <input
+                        class="cotiza__details-input"
+                        type="tel"
+                        id="cotiza-contact-phone"
+                        name="phone"
+                        autocomplete="tel"
+                        [value]="contactPhone()"
+                        (input)="onContactPhoneInput($event)"
+                        [attr.placeholder]="'cotizaPage.contact.placeholderPhone' | translate"
+                        [attr.aria-label]="'cotizaPage.contact.phone' | translate"
+                        inputmode="tel"
+                      />
+                    </label>
+                  </div>
+                </div>
+                @if (submitError()) {
+                  <p class="cotiza__contact-error" role="alert">{{ submitError() }}</p>
+                }
+                <button
+                  type="button"
+                  class="cotiza__continue-btn cotiza__continue-btn--below-card"
+                  [disabled]="!contactStepValid() || submitLoading()"
+                  [attr.aria-busy]="submitLoading()"
+                  (click)="submitQuote()"
+                >
+                  @if (submitLoading()) {
+                    {{ 'cotizaPage.contact.submitting' | translate }}
+                  } @else {
+                    {{ 'cotizaPage.contact.submit' | translate }}
+                  }
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Paso final -->
+        <div
+          class="cotiza__slide-panel cotiza__slide-panel--done"
+          [attr.aria-hidden]="passed() !== 9"
+        >
+          <div class="cotiza__slide-panel-inner">
+            <button
+              type="button"
+              class="cotiza__wizard-back cotiza__wizard-back--panel"
+              (click)="previousPassed()"
+            >
+              {{ 'cotizaPage.wizard.backStep' | translate }}
+            </button>
+            <div class="cotiza__slide-panel-body cotiza__slide-panel-body--done">
+              <h1 class="cotiza__heading">{{ 'cotizaPage.done.title' | translate }}</h1>
+              <p class="cotiza__done-lead">{{ 'cotizaPage.done.lead' | translate }}</p>
+            </div>
+          </div>
+        </div>
       </div>
-    </section>
+    </div>
   </main>
 </div>

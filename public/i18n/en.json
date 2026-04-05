@@ -204,6 +204,92 @@
         "aiImplementation": "AI implementation"
       },
       "continue": "Continue"
+    },
+    "companySize": {
+      "title": "What size is your team or company?",
+      "ariaLabel": "Company size",
+      "options": {
+        "soloFounder": "Solo founder",
+        "smallStartup": "Small startup",
+        "mediumBusiness": "Medium-sized business",
+        "largeBusiness": "Large company"
+      }
+    },
+    "budget": {
+      "title": "What is your estimated budget for this project?",
+      "ariaLabel": "Estimated project budget",
+      "options": {
+        "tier1": "$500 – $2,500",
+        "tier2": "$2,500 – $7,000",
+        "tier3": "$7,000 – $15,000",
+        "tier4": "$15,000+"
+      }
+    },
+    "details": {
+      "title": "Tell us what you need",
+      "ariaLabel": "Description of what you need for the project",
+      "placeholder": "Describe your goals, features, timeline, or any details that help us understand your project."
+    },
+    "features": {
+      "title": "What features do you need?",
+      "ariaLabel": "Features you need for the project",
+      "placeholder": "List or describe the functionality you want: e.g. login, payments, admin dashboard, integrations, notifications, etc."
+    },
+    "apiIntegration": {
+      "title": "Does your application require any API integration?*",
+      "ariaLabel": "API integration required?",
+      "yes": "Yes",
+      "no": "No",
+      "requirementsTitle": "List your API requirements",
+      "requirementsPlaceholder": "E.g. REST with OAuth2, webhooks to CRM, payment APIs…",
+      "requirementsAria": "API integration requirements",
+      "referencesTitle": "Do you have any references?",
+      "urlPlaceholder1": "Reference URL 1 (optional)",
+      "urlPlaceholder2": "Reference URL 2 (optional)",
+      "urlPlaceholder3": "Reference URL 3 (optional)",
+      "urlAria1": "First reference URL",
+      "urlAria2": "Second reference URL",
+      "urlAria3": "Third reference URL"
+    },
+    "references": {
+      "title": "References",
+      "lead": "Do you have any references? You can add up to three links (optional).",
+      "ariaLabel": "Project reference links"
+    },
+    "agreementBeforeContinue": {
+      "title": "Before we continue. Do you agree?",
+      "subtitle": "Projects often start around USD $7,000 and can reach up to USD $18,000 depending on complexity. Typical timelines range from 2 to 5 months.",
+      "ariaLabel": "Agreement on budget and timelines",
+      "options": {
+        "aware": "Yes, I understand",
+        "fullService": "I prefer a professional to handle my entire project (this will cost more)"
+      }
+    },
+    "contact": {
+      "title": "Your contact details",
+      "lead": "We need this information to send your quote.",
+      "ariaLabel": "Personal details form",
+      "firstName": "First name",
+      "lastName": "Last name",
+      "email": "Email",
+      "phone": "Mobile number",
+      "placeholderFirstName": "Your first name",
+      "placeholderLastName": "Your last name",
+      "placeholderEmail": "you@example.com",
+      "placeholderPhone": "Include country code if applicable",
+      "submit": "Send request",
+      "submitting": "Sending…",
+      "submitError": "Could not send. Please try again or email us directly.",
+      "mailtoHint": "Your email app will open with a summary—send the message to complete your request.",
+      "emailSubject": "New quote request — TechnologicalCode"
+    },
+    "done": {
+      "title": "All set!",
+      "ariaLabel": "Quote flow completed",
+      "lead": "Thank you. We’ve received your quote request and contact details. We’ll be in touch soon."
+    },
+    "wizard": {
+      "backStep": "Previous step"
     }
   },
   "cta": {

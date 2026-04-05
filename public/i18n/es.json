@@ -204,6 +204,92 @@
         "aiImplementation": "Implementacion de IA"
       },
       "continue": "Continuar"
+    },
+    "companySize": {
+      "title": "¿Qué tamaño tiene tu equipo o empresa?",
+      "ariaLabel": "Tamaño de empresa",
+      "options": {
+        "soloFounder": "Fundador en solitario",
+        "smallStartup": "Pequeña startup",
+        "mediumBusiness": "Empresa mediana",
+        "largeBusiness": "Empresa grande"
+      }
+    },
+    "budget": {
+      "title": "¿Cuál es tu presupuesto estimado para este proyecto?",
+      "ariaLabel": "Presupuesto estimado del proyecto",
+      "options": {
+        "tier1": "$500 – $2.500",
+        "tier2": "$2.500 – $7.000",
+        "tier3": "$7.000 – $15.000",
+        "tier4": "$15.000+"
+      }
+    },
+    "details": {
+      "title": "Cuéntanos qué necesitas",
+      "ariaLabel": "Descripción de lo que necesitas para el proyecto",
+      "placeholder": "Escribe aquí lo que buscas: objetivos, funcionalidades, plazos o cualquier detalle que nos ayude a entender tu proyecto."
+    },
+    "features": {
+      "title": "¿Qué funcionalidades necesitas?",
+      "ariaLabel": "Funcionalidades que necesitas en el proyecto",
+      "placeholder": "Lista o describe las funciones que debe tener: por ejemplo login, pagos, panel de administración, integraciones, notificaciones, etc."
+    },
+    "apiIntegration": {
+      "title": "¿Su aplicación requiere alguna integración de API?*",
+      "ariaLabel": "¿Requiere integración de API?",
+      "yes": "Sí",
+      "no": "No",
+      "requirementsTitle": "Enumere sus requisitos de API",
+      "requirementsPlaceholder": "Ej.: REST con OAuth2, webhooks hacia CRM, API de pagos…",
+      "requirementsAria": "Requisitos de integración de API",
+      "referencesTitle": "¿Tienes alguna referencia?",
+      "urlPlaceholder1": "URL de referencia 1 (opcional)",
+      "urlPlaceholder2": "URL de referencia 2 (opcional)",
+      "urlPlaceholder3": "URL de referencia 3 (opcional)",
+      "urlAria1": "Primera URL de referencia",
+      "urlAria2": "Segunda URL de referencia",
+      "urlAria3": "Tercera URL de referencia"
+    },
+    "references": {
+      "title": "Referencias",
+      "lead": "¿Tienes alguna referencia? Puedes pegar hasta tres enlaces (opcional).",
+      "ariaLabel": "Enlaces de referencia del proyecto"
+    },
+    "agreementBeforeContinue": {
+      "title": "Antes de continuar. ¿Estás de acuerdo?",
+      "subtitle": "Los proyectos suelen comenzar en USD $7.000 y pueden llegar hasta USD $18.000, según la complejidad. Las líneas de tiempo típicas varían de 2 a 5 meses.",
+      "ariaLabel": "Acuerdo sobre presupuesto y plazos",
+      "options": {
+        "aware": "Sí, soy consciente",
+        "fullService": "Prefiero que un profesional se encargue por completo de mi proyecto (esto supondrá un coste mayor)"
+      }
+    },
+    "contact": {
+      "title": "Tus datos de contacto",
+      "lead": "Para enviarte la cotización necesitamos estos datos.",
+      "ariaLabel": "Formulario de datos personales",
+      "firstName": "Nombre",
+      "lastName": "Apellidos",
+      "email": "Correo electrónico",
+      "phone": "Número de celular",
+      "placeholderFirstName": "Tu nombre",
+      "placeholderLastName": "Tus apellidos",
+      "placeholderEmail": "correo@ejemplo.com",
+      "placeholderPhone": "Incluye código de país si aplica",
+      "submit": "Enviar solicitud",
+      "submitting": "Enviando…",
+      "submitError": "No se pudo enviar. Inténtalo de nuevo o escríbenos por correo.",
+      "mailtoHint": "Se abrirá tu correo con el resumen. Envía el mensaje para completar la solicitud.",
+      "emailSubject": "Nueva solicitud de cotización — TechnologicalCode"
+    },
+    "done": {
+      "title": "¡Listo!",
+      "ariaLabel": "Cotización completada",
+      "lead": "Gracias. Hemos recibido tu solicitud de cotización y tus datos de contacto. Nos pondremos en contacto contigo pronto."
+    },
+    "wizard": {
+      "backStep": "Paso anterior"
     }
   },
   "cta": {
