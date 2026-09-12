@@ -11,4 +11,8 @@ export const routes: Routes = [
     path: 'cotiza',
     component: CotizaPageComponent,
   },
+  {
+    path: '**',
+    redirectTo: '',
+  },
 ];

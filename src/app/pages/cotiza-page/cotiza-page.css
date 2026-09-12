@@ -11,10 +11,6 @@
   color: var(--color-tc-text);
 }
 
-.cotiza__top {
-  flex-shrink: 0;
-}
-
 .cotiza__back {
   display: inline-flex;
   align-items: center;
@@ -28,6 +24,12 @@
 
 .cotiza__back:hover {
   color: var(--color-tc-text);
+}
+
+.cotiza__back--done {
+  display: inline-flex;
+  margin-top: 1.5rem;
+  justify-content: center;
 }
 
 .cotiza__wizard-main {
@@ -106,10 +108,6 @@
   padding-top: clamp(3.25rem, 5vw, 4rem);
 }
 
-.cotiza__slide-panel-inner--first {
-  padding-top: clamp(1rem, 3vw, 1.5rem);
-}
-
 .cotiza__slide-panel-body {
   display: flex;
   min-height: calc(100dvh - clamp(4rem, 8vw, 5.5rem));
@@ -157,15 +155,6 @@
   color: var(--color-tc-muted);
 }
 
-.cotiza__contact-mailto-hint {
-  margin: -0.5rem auto 1rem;
-  max-width: 36rem;
-  text-align: center;
-  font-size: 0.88rem;
-  line-height: 1.45;
-  color: color-mix(in srgb, var(--color-tc-muted) 92%, transparent);
-}
-
 .cotiza__contact-field {
   display: flex;
   flex-direction: column;
@@ -177,14 +166,6 @@
   font-size: 0.88rem;
   font-weight: 600;
   color: var(--color-tc-text);
-}
-
-.cotiza__contact-error {
-  margin: 0.35rem 0 0;
-  text-align: center;
-  font-size: 0.92rem;
-  line-height: 1.45;
-  color: #f87171;
 }
 
 .cotiza__option-content--multiline {
@@ -467,6 +448,12 @@
   opacity: 1;
   pointer-events: auto;
   transform: none;
+}
+
+.cotiza__options-stack--api .cotiza__continue-btn--below-card:disabled {
+  opacity: 0.42;
+  pointer-events: none;
+  cursor: not-allowed;
 }
 
 .cotiza__continue-btn:not(:disabled):hover {

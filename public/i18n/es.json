@@ -1,31 +1,19 @@
 {
   "header": {
     "brandAria": "TechnologicalCode — inicio",
-    "nav": {
-      "services": "SERVICIOS",
-      "portfolio": "PORTAFOLIO",
-      "process": "PROCESO"
-    },
-    "cta": "COMENZAR",
-    "lang": {
-      "label": "Idioma"
-    },
     "theme": {
       "light": "Cambiar a tema claro",
       "dark": "Cambiar a tema oscuro"
     }
   },
   "hero": {
-    "badge": "ESTADO DEL SISTEMA / ÓPTIMO",
     "title": {
       "prefix": "Construimos software que"
     },
     "lead": "La innovación se une al propósito. La tecnología debe empoderarte, no frenarte.",
     "cta": {
-      "primary": "INICIA TU PROYECTO",
-      "secondary": "VER PORTAFOLIO"
-    },
-    "scroll": "DESPLAZA"
+      "primary": "INICIA TU PROYECTO"
+    }
   },
   "keyCompetencies": {
     "title": "COMPETENCIAS CLAVE",
@@ -63,31 +51,6 @@
         "title": "Sistemas internos",
         "body": "Creamos sistemas personalizados que se adaptan a la forma en que trabajas.\n\nOrganiza tu información, optimiza tus procesos y toma decisiones\ncon herramientas diseñadas específicamente para tu negocio."
       }
-    }
-  },
-  "competencies": {
-    "title": "Competencias clave",
-    "lead": "Módulos diseñados con precisión para integrarse sin fricción en entornos de alto riesgo.",
-    "index": "Índice de servicios 01-04",
-    "web": {
-      "title": "Desarrollo web",
-      "desc": "Arquitecturas full stack optimizadas para latencia en milisegundos y concurrencia extrema.",
-      "action": "Inicializar"
-    },
-    "auto": {
-      "title": "Automatización",
-      "desc": "Flujos impulsados por IA que eliminan cuellos de botella operativos con precisión autónoma.",
-      "action": "Desplegar"
-    },
-    "api": {
-      "title": "Diseño de APIs",
-      "desc": "Capas de integración sólidas para comunicación segura y escalable entre sistemas distribuidos.",
-      "action": "Conectar"
-    },
-    "rt": {
-      "title": "Apps en tiempo real",
-      "desc": "Streaming bidireccional para finanzas en vivo, monitorización y plataformas de chat.",
-      "action": "Sincronizar"
     }
   },
   "portfolio": {
@@ -194,14 +157,13 @@
   "cotizaPage": {
     "title": "Cotiza tu proyecto",
     "back": "← Volver al inicio",
-    "lead": "Aquí podrás completar los detalles de tu proyecto. Muy pronto añadiremos el formulario.",
     "serviceType": {
-      "title": "Escoge el tipo de servicio necesitas",
+      "title": "Escoge el tipo de servicio que necesitas",
       "ariaLabel": "Tipo de servicio",
       "options": {
         "website": "Sitio web",
         "webApp": "App web",
-        "aiImplementation": "Implementacion de IA"
+        "aiImplementation": "Implementación de IA"
       },
       "continue": "Continuar"
     },
@@ -243,7 +205,6 @@
       "requirementsTitle": "Enumere sus requisitos de API",
       "requirementsPlaceholder": "Ej.: REST con OAuth2, webhooks hacia CRM, API de pagos…",
       "requirementsAria": "Requisitos de integración de API",
-      "referencesTitle": "¿Tienes alguna referencia?",
       "urlPlaceholder1": "URL de referencia 1 (opcional)",
       "urlPlaceholder2": "URL de referencia 2 (opcional)",
       "urlPlaceholder3": "URL de referencia 3 (opcional)",
@@ -278,15 +239,11 @@
       "placeholderEmail": "correo@ejemplo.com",
       "placeholderPhone": "Incluye código de país si aplica",
       "submit": "Enviar solicitud",
-      "submitting": "Enviando…",
-      "submitError": "No se pudo enviar. Inténtalo de nuevo o escríbenos por correo.",
-      "mailtoHint": "Se abrirá tu correo con el resumen. Envía el mensaje para completar la solicitud.",
       "emailSubject": "Nueva solicitud de cotización — TechnologicalCode"
     },
     "done": {
       "title": "¡Listo!",
-      "ariaLabel": "Cotización completada",
-      "lead": "Gracias. Hemos recibido tu solicitud de cotización y tus datos de contacto. Nos pondremos en contacto contigo pronto."
+      "lead": "Gracias por completar el formulario. El envío automático al correo de la empresa estará listo cuando conectemos el servidor."
     },
     "wizard": {
       "backStep": "Paso anterior"

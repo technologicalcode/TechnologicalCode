@@ -162,33 +162,3 @@ html[data-theme='dark'] .header--glass {
     'GRAD' 0,
     'opsz' 24;
 }
-
-.header__cta {
-  flex-shrink: 0;
-  border-radius: 9999px;
-  padding: 0.55rem 1.1rem;
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  color: #fff;
-  text-decoration: none;
-  background: linear-gradient(135deg, #7b61ff 0%, #00d1ff 100%);
-  box-shadow: 0 0 24px rgb(123 97 255 / 0.25);
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
-}
-
-.header__cta:hover {
-  transform: translateY(-1px);
-  box-shadow:
-    0 0 32px rgb(0 209 255 / 0.35),
-    0 0 24px rgb(123 97 255 / 0.3);
-}
-
-@media (min-width: 480px) {
-  .header__cta {
-    padding: 0.6rem 1.35rem;
-    font-size: 0.75rem;
-  }
-}

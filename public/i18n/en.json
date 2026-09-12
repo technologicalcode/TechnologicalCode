@@ -1,31 +1,19 @@
 {
   "header": {
     "brandAria": "TechnologicalCode — home",
-    "nav": {
-      "services": "SERVICES",
-      "portfolio": "PORTFOLIO",
-      "process": "PROCESS"
-    },
-    "cta": "GET STARTED",
-    "lang": {
-      "label": "Language"
-    },
     "theme": {
       "light": "Switch to light theme",
       "dark": "Switch to dark theme"
     }
   },
   "hero": {
-    "badge": "SYSTEM STATUS / OPTIMAL",
     "title": {
       "prefix": "We build software that"
     },
     "lead": "Innovation meets purpose. Technology should empower you, not hold you back.",
     "cta": {
-      "primary": "START YOUR PROJECT",
-      "secondary": "VIEW PORTFOLIO"
-    },
-    "scroll": "SCROLL DOWN"
+      "primary": "START YOUR PROJECT"
+    }
   },
   "keyCompetencies": {
     "title": "KEY COMPETENCIES",
@@ -63,31 +51,6 @@
         "title": "Internal systems",
         "body": "We build tailored systems that fit how you actually work.\n\nOrganize your information, streamline your processes, and make decisions\nwith tools built specifically for your business."
       }
-    }
-  },
-  "competencies": {
-    "title": "Core Competencies",
-    "lead": "Precision-engineered modules designed to integrate seamlessly into high-stakes environments.",
-    "index": "Service Index 01-04",
-    "web": {
-      "title": "Web Dev",
-      "desc": "Full-stack architectures optimized for millisecond latency and extreme concurrency.",
-      "action": "Initialize"
-    },
-    "auto": {
-      "title": "Automation",
-      "desc": "AI-driven workflows that eliminate operational bottlenecks with autonomous precision.",
-      "action": "Deploy"
-    },
-    "api": {
-      "title": "API Design",
-      "desc": "Robust integration layers built for secure, scalable communication between distributed systems.",
-      "action": "Connect"
-    },
-    "rt": {
-      "title": "Real-time Apps",
-      "desc": "Bi-directional data streaming solutions for live financial, monitoring, and chat platforms.",
-      "action": "Sync"
     }
   },
   "portfolio": {
@@ -194,7 +157,6 @@
   "cotizaPage": {
     "title": "Get a project quote",
     "back": "← Back to home",
-    "lead": "You’ll be able to share your project details here. We’ll add the form soon.",
     "serviceType": {
       "title": "Choose the type of service you need",
       "ariaLabel": "Service type",
@@ -243,7 +205,6 @@
       "requirementsTitle": "List your API requirements",
       "requirementsPlaceholder": "E.g. REST with OAuth2, webhooks to CRM, payment APIs…",
       "requirementsAria": "API integration requirements",
-      "referencesTitle": "Do you have any references?",
       "urlPlaceholder1": "Reference URL 1 (optional)",
       "urlPlaceholder2": "Reference URL 2 (optional)",
       "urlPlaceholder3": "Reference URL 3 (optional)",
@@ -278,15 +239,11 @@
       "placeholderEmail": "you@example.com",
       "placeholderPhone": "Include country code if applicable",
       "submit": "Send request",
-      "submitting": "Sending…",
-      "submitError": "Could not send. Please try again or email us directly.",
-      "mailtoHint": "Your email app will open with a summary—send the message to complete your request.",
       "emailSubject": "New quote request — TechnologicalCode"
     },
     "done": {
       "title": "All set!",
-      "ariaLabel": "Quote flow completed",
-      "lead": "Thank you. We’ve received your quote request and contact details. We’ll be in touch soon."
+      "lead": "Thanks for completing the form. Automatic email delivery will be available once we connect the server."
     },
     "wizard": {
       "backStep": "Previous step"

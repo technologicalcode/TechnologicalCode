@@ -1,4 +1,4 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { ThemeService } from './theme/theme.service';
 
@@ -10,8 +10,6 @@ import { ThemeService } from './theme/theme.service';
   styleUrl: './app.css',
 })
 export class App {
-  protected readonly title = signal('TechnologicalCode');
-
   constructor() {
     inject(ThemeService);
   }
