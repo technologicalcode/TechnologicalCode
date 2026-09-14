@@ -1,0 +1,25 @@
+<section class="quotes" aria-label="Testimonios">
+  <div class="wrap">
+    <p class="kicker">Clientes</p>
+    <h2>Lo que queda después de entregar las llaves.</h2>
+
+    <div class="frame">
+      @for (quote of quotes; track quote.name) {
+        @if (index() === $index) {
+          <blockquote class="quote-in">
+            <p>“{{ quote.text }}”</p>
+            <footer>
+              <cite>{{ quote.name }}</cite>
+              <span>{{ quote.role }}</span>
+            </footer>
+          </blockquote>
+        }
+      }
+      <div class="pager">
+        <button type="button" (click)="prev()" aria-label="Anterior">←</button>
+        <span>{{ index() + 1 }} / {{ quotes.length }}</span>
+        <button type="button" (click)="next()" aria-label="Siguiente">→</button>
+      </div>
+    </div>
+  </div>
+</section>

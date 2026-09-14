@@ -1,0 +1,56 @@
+<section
+  #projectsSection
+  class="hp"
+  id="projects"
+  [attr.aria-label]="'homeProjects.aria' | translate"
+  aria-labelledby="home-projects-heading"
+>
+  <div class="hp__inner" [class.hp__inner--visible]="visible()">
+    <h2 id="home-projects-heading" class="hp__title">
+      {{ 'homeProjects.title' | translate }}
+    </h2>
+    <p class="hp__lead">{{ 'homeProjects.lead' | translate }}</p>
+
+    <div class="hp__grid">
+      @for (project of projects; track project.id) {
+        @if (project.kind === 'route') {
+          <a class="hp__card" [routerLink]="project.path">
+            <img
+              class="hp__img"
+              [src]="project.image"
+              [alt]="project.titleKey | translate"
+              width="1200"
+              height="800"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="hp__meta">
+              <p class="hp__tag">{{ project.tagKey | translate }}</p>
+              <h3 class="hp__name">{{ project.titleKey | translate }}</h3>
+              <p class="hp__body">{{ project.bodyKey | translate }}</p>
+              <span class="hp__cta">{{ 'homeProjects.cta' | translate }}</span>
+            </div>
+          </a>
+        } @else {
+          <a class="hp__card" [href]="project.path">
+            <img
+              class="hp__img"
+              [src]="project.image"
+              [alt]="project.titleKey | translate"
+              width="1200"
+              height="800"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="hp__meta">
+              <p class="hp__tag">{{ project.tagKey | translate }}</p>
+              <h3 class="hp__name">{{ project.titleKey | translate }}</h3>
+              <p class="hp__body">{{ project.bodyKey | translate }}</p>
+              <span class="hp__cta">{{ 'homeProjects.cta' | translate }}</span>
+            </div>
+          </a>
+        }
+      }
+    </div>
+  </div>
+</section>

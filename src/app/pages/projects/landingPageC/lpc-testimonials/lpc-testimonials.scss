@@ -1,0 +1,91 @@
+:host {
+  display: block;
+}
+
+.quotes {
+  padding: 0 0 clamp(4rem, 9vw, 6rem);
+}
+
+.wrap {
+  width: min(100% - 2rem, 46rem);
+  margin-inline: auto;
+}
+
+.kicker {
+  margin: 0 0 0.7rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--lpc-copper);
+}
+
+.quotes h2 {
+  margin: 0 0 1.6rem;
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.frame {
+  padding: 1.6rem 1.4rem 1.3rem;
+  background: #fff;
+  border: 1px solid var(--lpc-line);
+}
+
+.quote-in {
+  animation: lpc-quote-in 0.38s ease-out;
+}
+
+@keyframes lpc-quote-in {
+  from {
+    opacity: 0;
+    transform: translateX(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+blockquote {
+  margin: 0;
+}
+
+blockquote p {
+  margin: 0 0 1.2rem;
+  font-family: var(--lpc-serif);
+  font-size: clamp(1.25rem, 3vw, 1.65rem);
+  line-height: 1.4;
+}
+
+cite {
+  display: block;
+  font-style: normal;
+  font-weight: 600;
+}
+
+footer span {
+  color: var(--lpc-muted);
+  font-size: 0.88rem;
+}
+
+.pager {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: 1.3rem;
+  color: var(--lpc-muted);
+  font-size: 0.82rem;
+}
+
+.pager button {
+  width: 2.4rem;
+  height: 2.4rem;
+  border: 1px solid var(--lpc-line);
+  background: var(--lpc-bg);
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.pager button:hover {
+  border-color: var(--lpc-copper);
+  color: var(--lpc-ink);
+}

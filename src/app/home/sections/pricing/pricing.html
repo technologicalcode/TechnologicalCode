@@ -1,0 +1,43 @@
+<section
+  #pricingSection
+  class="pricing"
+  id="pricing"
+  [attr.aria-label]="'homePricing.aria' | translate"
+  aria-labelledby="home-pricing-heading"
+>
+  <div class="pricing__inner" [class.pricing__inner--visible]="visible()">
+    <h2 id="home-pricing-heading" class="pricing__title">
+      {{ 'homePricing.title' | translate }}
+    </h2>
+    <p class="pricing__lead">{{ 'homePricing.lead' | translate }}</p>
+
+    <div class="pricing__grid">
+      @for (plan of plans; track plan.id) {
+        <article
+          class="pricing__card"
+          [class.pricing__card--featured]="plan.featured"
+        >
+          @if (plan.featured) {
+            <p class="pricing__badge">{{ 'homePricing.featured' | translate }}</p>
+          }
+          <h3 class="pricing__name">{{ plan.nameKey | translate }}</h3>
+          <p class="pricing__amount">
+            <span class="pricing__from">{{ 'homePricing.from' | translate }}</span>
+            {{ plan.amountKey | translate }}
+          </p>
+          <p class="pricing__body">{{ plan.bodyKey | translate }}</p>
+          <ul class="pricing__list">
+            @for (item of plan.itemKeys; track item) {
+              <li>{{ item | translate }}</li>
+            }
+          </ul>
+          <a class="pricing__cta" routerLink="/cotiza">
+            {{ 'homePricing.cta' | translate }}
+          </a>
+        </article>
+      }
+    </div>
+
+    <p class="pricing__note">{{ 'homePricing.note' | translate }}</p>
+  </div>
+</section>

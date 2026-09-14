@@ -1,0 +1,136 @@
+[
+  {
+    "id": "torta-chocolate",
+    "name": "Torta de chocolate",
+    "price": 89,
+    "category": "Tortas",
+    "featured": true,
+    "image": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&q=70",
+    "description": "Bizcocho húmedo, ganache y un toque de café. La de siempre, bien hecha.",
+    "variants": [
+      { "id": "6p", "label": "6 porciones", "price": 89 },
+      { "id": "12p", "label": "12 porciones", "price": 145 }
+    ]
+  },
+  {
+    "id": "pie-limon",
+    "name": "Pie de limón",
+    "price": 65,
+    "category": "Tortas",
+    "featured": true,
+    "image": "https://images.unsplash.com/photo-1519915028121-7d3463d20b13?auto=format&fit=crop&w=900&q=70",
+    "description": "Base crocante, crema ácida y merengue italiano. Se pide con un día de anticipación."
+  },
+  {
+    "id": "cheesecake-lucuma",
+    "name": "Cheesecake de lúcuma",
+    "price": 95,
+    "category": "Tortas",
+    "featured": true,
+    "image": "https://images.unsplash.com/photo-1533134486753-c833f0ed4866?auto=format&fit=crop&w=900&q=70",
+    "description": "Lúcuma de temporada, queso crema y base de galleta. Sin colorantes.",
+    "variants": [
+      { "id": "6p", "label": "6 porciones", "price": 95 },
+      { "id": "12p", "label": "12 porciones", "price": 155 }
+    ]
+  },
+  {
+    "id": "carrot-cake",
+    "name": "Carrot cake",
+    "price": 78,
+    "category": "Tortas",
+    "image": "https://images.unsplash.com/photo-1621303837174-89787a7d4729?auto=format&fit=crop&w=900&q=70",
+    "description": "Zanahoria, nueces y frosting de queso. Menos azúcar de lo que esperas."
+  },
+  {
+    "id": "tres-leches",
+    "name": "Tres leches",
+    "price": 72,
+    "category": "Tortas",
+    "image": "https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=900&q=70",
+    "description": "Esponjosa, fría y con canela. Ideal para el domingo."
+  },
+  {
+    "id": "alfajores",
+    "name": "Alfajores x6",
+    "price": 22,
+    "category": "Galletas",
+    "featured": true,
+    "image": "https://images.unsplash.com/photo-1612203985729-70726954388c?auto=format&fit=crop&w=900&q=70",
+    "description": "Maicena, manjar blanco y coco. Se deshacen si los dejas en la mesa."
+  },
+  {
+    "id": "cookies-choco",
+    "name": "Cookies de chocolate x8",
+    "price": 18,
+    "category": "Galletas",
+    "featured": true,
+    "image": "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=900&q=70",
+    "description": "Bordes crocantes, centro blando. Chocolate 60%."
+  },
+  {
+    "id": "avena",
+    "name": "Galletas de avena x8",
+    "price": 16,
+    "category": "Galletas",
+    "image": "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=900&q=70",
+    "description": "Avena, pasas y un poco de canela. Van bien con el café de la tarde."
+  },
+  {
+    "id": "biscotti",
+    "name": "Biscotti de almendras",
+    "price": 20,
+    "category": "Galletas",
+    "image": "https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?auto=format&fit=crop&w=900&q=70",
+    "description": "Para mojar. Almendras tostadas, dos horneadas."
+  },
+  {
+    "id": "hogaza",
+    "name": "Hogaza de masa madre",
+    "price": 14,
+    "category": "Panes",
+    "featured": true,
+    "image": "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=900&q=70",
+    "description": "Corteza gruesa, miga abierta. Sale a las 10:00. Se acaba."
+  },
+  {
+    "id": "baguette",
+    "name": "Baguette",
+    "price": 8,
+    "category": "Panes",
+    "image": "https://images.unsplash.com/photo-1549931319-a545dcf3bc73?auto=format&fit=crop&w=900&q=70",
+    "description": "Clásica, crujiente. Mejor el mismo día."
+  },
+  {
+    "id": "croissants",
+    "name": "Croissants x4",
+    "price": 24,
+    "category": "Panes",
+    "image": "https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=900&q=70",
+    "description": "Mantequilla de verdad, 24 horas de proceso. Huelen la cuadra."
+  },
+  {
+    "id": "focaccia",
+    "name": "Focaccia de romero",
+    "price": 18,
+    "category": "Panes",
+    "image": "https://images.unsplash.com/photo-1608198093002-ad4e005484ec?auto=format&fit=crop&w=900&q=70",
+    "description": "Aceite de oliva, romero y sal gruesa. Para partir en la mesa."
+  },
+  {
+    "id": "roles-canela",
+    "name": "Roles de canela x6",
+    "price": 28,
+    "category": "Estacional",
+    "image": "https://images.unsplash.com/photo-1509365465985-25d11c17e812?auto=format&fit=crop&w=900&q=70",
+    "description": "Masa blanda, canela y glaze. Solo los sábados."
+  },
+  {
+    "id": "box-temporada",
+    "name": "Box de temporada",
+    "price": 55,
+    "category": "Estacional",
+    "image": "https://images.unsplash.com/photo-1486427944299-d1955d23e34d?auto=format&fit=crop&w=900&q=70",
+    "description": "Una hogaza, galletas y algo dulce de la semana. Para regalar sin pensar tanto."
+  }
+]

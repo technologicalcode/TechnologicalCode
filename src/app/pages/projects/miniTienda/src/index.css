@@ -1,0 +1,26 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Outfit', ui-sans-serif, system-ui, sans-serif;
+  --color-ink: #2a2118;
+  --color-muted: #6b5b4c;
+  --color-cream: #f6efe6;
+  --color-paper: #fffaf4;
+  --color-cocoa: #6b3a24;
+  --color-cocoa-2: #8a4d2f;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+  background: var(--color-cream);
+}
+
+#root {
+  min-height: 100dvh;
+}

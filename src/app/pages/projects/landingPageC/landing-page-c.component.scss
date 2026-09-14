@@ -1,0 +1,31 @@
+/* Tokens del demo “Landing Elaborada”. Los hijos heredan estas variables. */
+.lpc {
+  --lpc-bg: #f3eee6;
+  --lpc-bg-2: #e8e0d4;
+  --lpc-ink: #161310;
+  --lpc-muted: #6b635a;
+  --lpc-copper: #b45a2c;
+  --lpc-copper-2: #d47848;
+  --lpc-line: rgb(22 19 16 / 0.1);
+  --lpc-header: 4.4rem;
+  --lpc-sans: 'Sora', Manrope, system-ui, sans-serif;
+  --lpc-serif: 'Cormorant Garamond', Georgia, serif;
+  --lpc-shadow: 0 22px 50px rgb(22 19 16 / 0.12);
+  min-height: 100dvh;
+  color: var(--lpc-ink);
+  background: var(--lpc-bg);
+  font-family: var(--lpc-sans);
+  font-size: 1.02rem;
+  line-height: 1.65;
+}
+
+.lpc :is(h1, h2, h3) {
+  font-family: var(--lpc-serif);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  line-height: 1.12;
+}
+
+.lpc a {
+  color: inherit;
+}

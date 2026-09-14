@@ -8,48 +8,55 @@
   },
   "hero": {
     "title": {
-      "prefix": "Construimos software que"
+      "prefix": "Software que"
     },
-    "lead": "La innovación se une al propósito. La tecnología debe empoderarte, no frenarte.",
+    "lead": "Webs, automatizaciones, sistemas internos y chips NFC que venden, ahorran tiempo y crecen contigo. Sin jerga: resultado que se nota en el negocio.",
     "cta": {
-      "primary": "INICIA TU PROYECTO"
+      "primary": "COTIZA TU PROYECTO"
     }
   },
   "keyCompetencies": {
-    "title": "COMPETENCIAS CLAVE",
+    "title": "LO QUE ENTREGAMOS",
     "leftBody": {
       "parts": [
         {
-          "text": "En un mundo que evoluciona cada segundo, avanzar con la "
+          "text": "No vendemos features. Entregamos "
         },
         {
-          "text": "tecnología",
+          "text": "resultados",
           "accent": "1"
         },
         {
-          "text": " ya no es opcional es una "
+          "text": ": menos fricción y más "
         },
         {
-          "text": "necesidad",
+          "text": "crecimiento",
           "accent": "1"
+        },
+        {
+          "text": "."
         }
       ]
     },
-    "rightBody": "Por eso existe TechnologicalCode: para impulsar negocios modernos.",
+    "rightBody": "Software a medida para equipos que quieren avanzar más rápido.",
     "aria": "Narrativa de competencias clave",
     "cardsRegion": "Servicios que ofrecemos",
     "cards": {
       "automation": {
         "title": "Automatización",
-        "body": "Automatizamos procesos repetitivos para que tu negocio funcione sin fricción.\n\nDesde tareas operativas hasta flujos completos, reducimos errores, ahorramos tiempo\ny te permitimos enfocarte en lo que realmente importa: crecer."
+        "body": "Quita de tu equipo lo repetitivo: menos errores, menos horas perdidas.\n\nDe una tarea suelta a un flujo completo, para que te centres en vender y decidir."
       },
       "web": {
         "title": "Página web",
-        "body": "Diseñamos y desarrollamos páginas web modernas, rápidas y enfocadas en conversión.\n\nNo solo se ven bien, están pensadas para atraer clientes,\ngenerar confianza y representar tu negocio al más alto nivel."
+        "body": "Sitios rápidos pensados para convertir, no solo para verse bien.\n\nAtraen clientes, generan confianza y dejan claro por qué elegirte."
       },
       "internal": {
         "title": "Sistemas internos",
-        "body": "Creamos sistemas personalizados que se adaptan a la forma en que trabajas.\n\nOrganiza tu información, optimiza tus procesos y toma decisiones\ncon herramientas diseñadas específicamente para tu negocio."
+        "body": "Herramientas hechas a tu forma de trabajar, no al revés.\n\nOrdena datos, acelera procesos y decide con información que sí puedes usar."
+      },
+      "nfc": {
+        "title": "Chips NFC",
+        "body": "Un toque y el cliente va al menú, a las reseñas, a WhatsApp o a tu web.\n\nPara restaurantes, locales y eventos: sin app, sin filas y sin QR gastado."
       }
     }
   },
@@ -58,27 +65,27 @@
     "leftBody": {
       "parts": [
         {
-          "text": "Sistemas internos con estructuras "
+          "text": "Sistemas que ordenan tu operación y "
         },
         {
-          "text": "modernas",
+          "text": "escalan",
           "accent": "1"
         },
         {
-          "text": " y "
+          "text": " contigo, sin "
         },
         {
-          "text": "escalabilidad",
+          "text": "caos",
           "accent": "1"
         }
       ]
     },
-    "rightBody": "Todo lo que tu negocio necesita para explotar",
+    "rightBody": "Menos caos. Más control. Mejores decisiones.",
     "showcase": {
-      "title": "Con modelos modernos y futurísticos",
-      "subtitle": "Para mayor facilidad de interacción",
-      "cta": "Contáctanos",
-      "note": "Mantén los ojos en tu negocio desde donde estés",
+      "title": "Diseñado para usarse, no solo para impresionar",
+      "subtitle": "Tu equipo lo entiende desde el primer día",
+      "cta": "Hablemos",
+      "note": "Tu operación, visible desde cualquier lugar",
       "collageImgAlt": "Vista de panel y métricas"
     }
   },
@@ -88,53 +95,159 @@
     "title": {
       "parts": [
         {
-          "text": "Con "
-        },
-        {
-          "text": "la evolución de la IA",
-          "accent": "1"
-        },
-        {
-          "text": " es momento de que "
-        },
-        {
-          "text": "tu negocio",
-          "accent": "1"
-        },
-        {
-          "text": " también "
-        },
-        {
-          "text": "evolucione",
-          "accent": "1"
-        },
-        {
-          "text": "."
-        }
-      ]
-    },
-    "body": {
-      "parts": [
-        {
-          "text": "Mejora el "
-        },
-        {
-          "text": "rendimiento",
-          "accent": "1"
-        },
-        {
-          "text": " de tu negocio con ayuda de la "
+          "text": "Deja que la "
         },
         {
           "text": "IA",
           "accent": "1"
         },
         {
-          "text": " !TRABAJEMOS JUNTOS!"
+          "text": " haga el trabajo pesado. Tú "
+        },
+        {
+          "text": "diriges",
+          "accent": "1"
+        },
+        {
+          "text": " el negocio."
+        }
+      ]
+    },
+    "body": {
+      "parts": [
+        {
+          "text": "Automatiza lo repetido y acelera lo importante. "
+        },
+        {
+          "text": "Construyamos",
+          "accent": "1"
+        },
+        {
+          "text": " juntos."
         }
       ]
     },
     "cta": "Contáctanos"
+  },
+  "homeProjects": {
+    "aria": "Proyectos de ejemplo",
+    "title": "Proyectos",
+    "lead": "Entra a cada demo y recorre lo que entregamos: landings y una mini-tienda.",
+    "cta": "Ver proyecto",
+    "items": {
+      "filo": {
+        "title": "Filo",
+        "tag": "Landing básica",
+        "body": "Barbería en Barranco. Hero, servicios, WhatsApp y un sitio que carga ligero."
+      },
+      "vertice": {
+        "title": "Vértice",
+        "tag": "Landing elaborada",
+        "body": "Estudio de arquitectura. Animaciones, galería, testimonios y formulario."
+      },
+      "miga": {
+        "title": "Miga",
+        "tag": "Mini-tienda",
+        "body": "Pastelería en Miraflores. Catálogo, carrito y checkout por WhatsApp."
+      }
+    }
+  },
+  "whyUs": {
+    "aria": "Por qué elegirnos",
+    "title": {
+      "parts": [
+        {
+          "text": "Por qué "
+        },
+        {
+          "text": "elegirnos",
+          "accent": "1"
+        }
+      ]
+    },
+    "body": {
+      "parts": [
+        {
+          "text": "En TechnologicalCode combinamos IA con desarrolladores reales para entregarte tu página "
+        },
+        {
+          "text": "en días, no en meses",
+          "accent": "1"
+        },
+        {
+          "text": ". Nos encargamos de que funcione bien desde el despliegue hasta el día a día: resolvemos cualquier incidencia de mantenimiento "
+        },
+        {
+          "text": "rápido y sin vueltas",
+          "accent": "1"
+        },
+        {
+          "text": ", y sabrás siempre qué incluye tu plan, "
+        },
+        {
+          "text": "sin cobros ocultos ni sorpresas",
+          "accent": "1"
+        },
+        {
+          "text": " después de la entrega."
+        }
+      ]
+    },
+    "cards": {
+      "speed": {
+        "title": "Velocidad",
+        "body": "IA más desarrolladores reales. Tu página lista en días, no en meses."
+      },
+      "care": {
+        "title": "Mantenimiento",
+        "body": "Si algo falla, lo resolvemos rápido y sin vueltas. Del despliegue al día a día."
+      },
+      "price": {
+        "title": "Precios claros",
+        "body": "Sabes qué incluye tu plan. Sin cobros ocultos ni sorpresas después de la entrega."
+      }
+    }
+  },
+  "homePricing": {
+    "aria": "Nuestros precios",
+    "title": "Precios",
+    "lead": "Rangos de partida. El alcance real se cotiza según tu proyecto.",
+    "from": "Desde",
+    "featured": "Más pedido",
+    "cta": "Cotizar",
+    "note": "Los sistemas a medida suelen ir de USD 7.000 a 18.000 y tardan de 2 a 5 meses. Chips NFC y extras se suman aparte.",
+    "plans": {
+      "landing": {
+        "name": "Presencia web",
+        "amount": "USD 500",
+        "body": "Landing o sitio corto para verse bien y convertir.",
+        "items": {
+          "a": "Página, WhatsApp y carga ligera",
+          "b": "Lista en días, no en meses",
+          "c": "Mantenimiento después de la entrega"
+        }
+      },
+      "growth": {
+        "name": "Negocio digital",
+        "amount": "USD 2.500",
+        "body": "Web elaborada o mini-tienda con más flujo.",
+        "items": {
+          "a": "Catálogo, formularios o animaciones",
+          "b": "Pensada para vender, no solo mostrar",
+          "c": "Ajustes de alcance en la cotización"
+        }
+      },
+      "custom": {
+        "name": "A medida",
+        "amount": "USD 7.000",
+        "body": "Sistemas internos, automatización, CRM o IA.",
+        "items": {
+          "a": "Hecho a tu forma de trabajar",
+          "b": "Plazos típicos de 2 a 5 meses",
+          "c": "Precio final según complejidad"
+        }
+      }
+    }
   },
   "hook": {
     "aria": "Sección gancho",
@@ -142,14 +255,14 @@
     "text": {
       "parts": [
         {
-          "text": "Trabaja con nosotros con "
+          "text": "Empieza con el plan que encaje: "
         },
         {
-          "text": "distintas formas de pago",
+          "text": "pagos flexibles",
           "accent": "1"
         },
         {
-          "text": " para nuestra variedad de servicios."
+          "text": " y un alcance claro desde el día uno."
         }
       ]
     }
@@ -250,27 +363,22 @@
     }
   },
   "cta": {
-    "title": "Construyamos algo potente",
-    "lead": "¿Listo para iniciar tu próximo proyecto? Escríbenos por WhatsApp.",
-    "whatsapp": "Contactar por WhatsApp"
+    "title": "Cuéntanos qué quieres construir",
+    "lead": "En minutos vemos alcance, plazos y el siguiente paso. Escríbenos por WhatsApp.",
+    "whatsapp": "Hablar por WhatsApp"
   },
   "footer": {
-    "tagline": "Agencia de ingeniería de software de alto nivel, enfocada en rendimiento obsidiana e integridad arquitectónica.",
+    "tagline": "Ingeniería de software para negocios que quieren sistemas rápidos, sólidos y a medida.",
     "sitemap": "Mapa del sitio",
-    "legal": "Legal",
-    "connection": "Conexión",
     "link": {
       "services": "Servicios",
       "portfolio": "Portafolio",
-      "process": "Proceso",
-      "terms": "Términos",
-      "privacy": "Privacidad",
-      "security": "Seguridad",
-      "linkedin": "LinkedIn",
-      "github": "GitHub",
-      "contact": "Contacto"
+      "projects": "Proyectos",
+      "why": "Por qué elegirnos",
+      "pricing": "Precios",
+      "process": "Proceso"
     },
-    "copy": "© 2024 TechnologicalCode. Diseñado para el pulso obsidiano.",
+    "copy": "© 2026 TechnologicalCode. Diseñado para el pulso obsidiano.",
     "status": {
       "server": "Servidor: Frankfurt-01",
       "network": "Red: segura"

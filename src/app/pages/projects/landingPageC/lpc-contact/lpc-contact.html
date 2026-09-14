@@ -1,0 +1,46 @@
+<section class="contact" id="lpc-contacto">
+  <div class="wrap">
+    <p class="kicker">Contacto</p>
+    <h2>Cuéntanos el terreno, la casa o la duda.</h2>
+    <p class="lead">Respondemos en un día hábil. También puedes escribir por WhatsApp si prefieres ir al grano.</p>
+
+    @if (sent()) {
+      <p class="ok ok-in">Recibido. En esta demo no hay servidor: en un proyecto real aquí partiría el correo.</p>
+    } @else {
+      <form [formGroup]="form" (ngSubmit)="submit()" novalidate>
+        <label class="field" [class.field--error]="invalid('name')">
+          <input type="text" formControlName="name" autocomplete="name" placeholder=" " />
+          <span class="field__line" aria-hidden="true"></span>
+          <span class="field__label">Nombre</span>
+          @if (invalid('name')) {
+            <small>Escribe tu nombre.</small>
+          }
+        </label>
+        <label class="field" [class.field--error]="invalid('email')">
+          <input type="email" formControlName="email" autocomplete="email" placeholder=" " />
+          <span class="field__line" aria-hidden="true"></span>
+          <span class="field__label">Correo</span>
+          @if (invalid('email')) {
+            <small>Necesitamos un correo válido.</small>
+          }
+        </label>
+        <label class="field">
+          <input type="tel" formControlName="phone" autocomplete="tel" placeholder=" " />
+          <span class="field__line" aria-hidden="true"></span>
+          <span class="field__label">Teléfono <em>(opcional)</em></span>
+        </label>
+        <label class="field field--area" [class.field--error]="invalid('message')">
+          <textarea formControlName="message" rows="5" placeholder=" "></textarea>
+          <span class="field__line" aria-hidden="true"></span>
+          <span class="field__label">Mensaje</span>
+          @if (invalid('message')) {
+            <small>Cuéntanos un poco más (mínimo 12 caracteres).</small>
+          }
+        </label>
+        <button type="submit" [disabled]="sending()">
+          {{ sending() ? 'Enviando…' : 'Enviar mensaje' }}
+        </button>
+      </form>
+    }
+  </div>
+</section>

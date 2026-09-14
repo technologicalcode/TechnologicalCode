@@ -12,6 +12,13 @@ export const routes: Routes = [
     component: CotizaPageComponent,
   },
   {
+    path: 'projects/landing-elaborada',
+    loadComponent: () =>
+      import('./pages/projects/landingPageC/landing-page-c.component').then(
+        (m) => m.LandingPageCComponent,
+      ),
+  },
+  {
     path: '**',
     redirectTo: '',
   },

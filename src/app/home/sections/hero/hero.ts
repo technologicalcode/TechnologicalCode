@@ -51,7 +51,7 @@ export class HeroSectionComponent {
       }
 
       this.typedLine.set('');
-      this.timer = setInterval(() => this.step(), 52);
+      this.timer = setInterval(() => this.step(), 40);
     });
 
     this.destroyRef.onDestroy(() => {

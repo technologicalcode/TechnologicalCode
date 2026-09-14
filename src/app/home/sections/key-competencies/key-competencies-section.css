@@ -19,7 +19,8 @@
   box-sizing: border-box;
   width: 100vw;
   margin-left: calc(50% - 50vw);
-  padding-block: clamp(1.5rem, 4.5vw, 2.35rem);
+  /* Hueco extra arriba: la onda no se recorta ni asoma al hero */
+  padding-block: clamp(2.15rem, 5.5vw, 3rem);
   background-color: var(--color-tc-keycomp-bg);
   border-bottom: 1px solid var(--color-tc-keycomp-wave-border);
   overflow-x: hidden;
@@ -166,7 +167,7 @@
 
 @media (min-width: 768px) {
   .kc__cards {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     align-items: stretch;
   }
 }
@@ -180,7 +181,7 @@
   background-color: var(--color-tc-keycomp-dot);
   opacity: 0;
   transform: translate3d(0, 1.25rem, 0);
-  transition: opacity 0.55s cubic-bezier(0.22,1,0.36,1), transform 0.55s cubic-bezier(0.22,1,0.36,1);
+  transition: opacity 0.38s cubic-bezier(0.22, 1, 0.36, 1), transform 0.38s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .kc__cards--visible .kc__card {
@@ -189,11 +190,15 @@
 }
 
 .kc__cards--visible .kc__card:nth-child(2) {
-  transition-delay: 95ms;
+  transition-delay: 55ms;
 }
 
 .kc__cards--visible .kc__card:nth-child(3) {
-  transition-delay: 190ms;
+  transition-delay: 110ms;
+}
+
+.kc__cards--visible .kc__card:nth-child(4) {
+  transition-delay: 165ms;
 }
 
 .kc__card-icon {

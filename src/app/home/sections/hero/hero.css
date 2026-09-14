@@ -1,17 +1,18 @@
 .hero {
   position: relative;
   display: flex;
-  min-height: min(88vh, 52rem);
+  /* Cubre el viewport menos el header: la fila de iconos no asoma al cargar */
+  min-height: calc(100dvh - var(--header-bar-height));
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2.5rem 1.25rem 5rem;
+  padding: 2.5rem 1.25rem 3rem;
   overflow: hidden;
 }
 
 @media (min-width: 768px) {
   .hero {
-    padding: 3rem 1.5rem 5.5rem;
+    padding: 3rem 1.5rem 3.25rem;
   }
 }
 

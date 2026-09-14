@@ -1,0 +1,73 @@
+:host {
+  display: block;
+}
+
+.services {
+  padding: 0 0 clamp(4.5rem, 10vw, 7rem);
+  background: linear-gradient(180deg, transparent, var(--lpc-bg-2) 18%);
+}
+
+.wrap {
+  width: min(100% - 2rem, 72rem);
+  margin-inline: auto;
+}
+
+.kicker {
+  margin: 0 0 0.7rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--lpc-copper);
+}
+
+.services h2 {
+  margin: 0 0 1.8rem;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+}
+
+.cards {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.card {
+  padding: 1.45rem 1.35rem 1.5rem;
+  background: #fff;
+  border: 1px solid var(--lpc-line);
+  box-shadow: 0 0 0 rgb(22 19 16 / 0);
+  transition:
+    transform 0.28s ease,
+    box-shadow 0.28s ease,
+    border-color 0.28s ease;
+}
+
+.card span {
+  color: var(--lpc-copper);
+  font-family: var(--lpc-serif);
+  font-size: 1.15rem;
+}
+
+.card h3 {
+  margin: 0.45rem 0 0.4rem;
+  font-size: 1.35rem;
+}
+
+.card p {
+  margin: 0;
+  color: var(--lpc-muted);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: rgb(180 90 44 / 0.35);
+  box-shadow: var(--lpc-shadow);
+}
+
+@media (min-width: 760px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}

@@ -7,6 +7,9 @@ import { FinalCtaSectionComponent } from './sections/final-cta/final-cta';
 import { GanchoSectionComponent } from './sections/gancho/gancho';
 import { ManifestoSectionComponent } from './sections/manifesto/manifesto';
 import { PortfolioSectionComponent } from './sections/portfolio/portfolio';
+import { HomeProjectsSectionComponent } from './sections/home-projects/home-projects';
+import { PricingSectionComponent } from './sections/pricing/pricing';
+import { WhyUsSectionComponent } from './sections/why-us/why-us';
 
 @Component({
   selector: 'app-home-page',
@@ -17,6 +20,9 @@ import { PortfolioSectionComponent } from './sections/portfolio/portfolio';
     KeyCompetenciesSectionComponent,
     PortfolioSectionComponent,
     ManifestoSectionComponent,
+    WhyUsSectionComponent,
+    PricingSectionComponent,
+    HomeProjectsSectionComponent,
     GanchoSectionComponent,
     FinalCtaSectionComponent,
     FooterComponent,

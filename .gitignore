@@ -8,6 +8,9 @@
 
 # Node
 /node_modules
+src/app/pages/projects/miniTienda/node_modules
+src/app/pages/projects/CRMs/frontend/node_modules
+src/app/pages/projects/CRMs/backend/node_modules
 npm-debug.log
 yarn-error.log
 

@@ -15,24 +15,19 @@ import {
 } from '@angular/core';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { ActiveLanguage } from '../../../locale/active-language';
-
-const TYPEWRITER_MS = 4200;
+import { isSectionEnteringViewport, SCROLL_REVEAL_IO, TYPEWRITER_TITLE_MS } from '../../scroll-reveal';
 const FALLBACK_TITLE_PARTS: TitlePart[] = [
-  { text: 'Con ' },
-  { text: 'la evolución de la IA', accent: true },
-  { text: ' es momento de que ' },
-  { text: 'tu negocio', accent: true },
-  { text: ' también ' },
-  { text: 'evolucione', accent: true },
-  { text: '.' },
+  { text: 'Deja que la ' },
+  { text: 'IA', accent: true },
+  { text: ' haga el trabajo pesado. Tú ' },
+  { text: 'diriges', accent: true },
+  { text: ' el negocio.' },
 ];
 
 const FALLBACK_BODY_PARTS: TitlePart[] = [
-  { text: 'Mejora el ' },
-  { text: 'rendimiento', accent: true },
-  { text: ' de tu negocio con ayuda de la ' },
-  { text: 'IA', accent: true },
-  { text: ' !TRABAJEMOS JUNTOS!' },
+  { text: 'Automatiza lo repetido y acelera lo importante. ' },
+  { text: 'Construyamos', accent: true },
+  { text: ' juntos.' },
 ];
 
 /** Igual que portfolio/keyCompetencies: `accent` puede venir como string desde ngx-translate. */
@@ -145,7 +140,7 @@ export class ManifestoSectionComponent {
         }
         const r = el.getBoundingClientRect();
         const vh = win.innerHeight;
-        if (r.top < vh * 0.88 && r.bottom > vh * 0.06) {
+        if (isSectionEnteringViewport(r, vh)) {
           this.ngZone.run(() => this.onManifestoEntered());
         }
       };
@@ -164,7 +159,7 @@ export class ManifestoSectionComponent {
           }
         }
       },
-      { root: null, threshold: 0.12, rootMargin: '0px 0px -6% 0px' },
+      SCROLL_REVEAL_IO,
     );
     this.sectionIo.observe(el);
   }
@@ -205,7 +200,7 @@ export class ManifestoSectionComponent {
 
     const tick = (now: number): void => {
       const elapsed = now - start;
-      const p = Math.min(1, elapsed / TYPEWRITER_MS);
+      const p = Math.min(1, elapsed / TYPEWRITER_TITLE_MS);
       this.ngZone.run(() => this.applyTypingProgress(p));
       if (p < 1) {
         this.typingRafId = win.requestAnimationFrame(tick);

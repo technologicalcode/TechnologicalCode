@@ -1,0 +1,72 @@
+:host {
+  display: block;
+}
+
+.about {
+  padding: clamp(4.5rem, 10vw, 7rem) 0;
+}
+
+.about__grid {
+  width: min(100% - 2rem, 72rem);
+  margin-inline: auto;
+  display: grid;
+  gap: 2.4rem;
+}
+
+.kicker {
+  margin: 0 0 0.7rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--lpc-copper);
+}
+
+.about h2 {
+  margin: 0 0 1rem;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+}
+
+.about p {
+  margin: 0;
+  color: var(--lpc-muted);
+  max-width: 36rem;
+}
+
+.stats {
+  list-style: none;
+  margin: 2rem 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.stats strong {
+  display: block;
+  font-family: var(--lpc-serif);
+  font-size: 1.8rem;
+}
+
+.stats span {
+  color: var(--lpc-muted);
+  font-size: 0.78rem;
+}
+
+.about__photo {
+  margin: 0;
+  overflow: hidden;
+}
+
+.about__photo img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+@media (min-width: 880px) {
+  .about__grid {
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+    gap: 4rem;
+  }
+}

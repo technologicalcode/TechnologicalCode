@@ -1,0 +1,83 @@
+:host {
+  display: block;
+}
+
+.gallery {
+  padding: clamp(4rem, 9vw, 6.5rem) 0;
+}
+
+.wrap {
+  width: min(100% - 2rem, 72rem);
+  margin-inline: auto;
+}
+
+.kicker {
+  margin: 0 0 0.7rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--lpc-copper);
+}
+
+.gallery h2 {
+  margin: 0 0 1.6rem;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+}
+
+.grid {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.shot {
+  padding: 0;
+  border: 0;
+  background: var(--lpc-bg-2);
+  overflow: hidden;
+  cursor: zoom-in;
+}
+
+.shot img {
+  width: 100%;
+  aspect-ratio: 5 / 4;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.45s ease;
+}
+
+.shot:hover img {
+  transform: scale(1.04);
+}
+
+.lite {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: grid;
+  place-items: center;
+  padding: 1.25rem;
+  background: rgb(22 19 16 / 0.78);
+}
+
+.lite img {
+  max-width: min(100%, 56rem);
+  max-height: 82dvh;
+  object-fit: contain;
+}
+
+.lite__x {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  border: 0;
+  background: #fff;
+  color: var(--lpc-ink);
+  padding: 0.5rem 0.8rem;
+  font-size: 0.8rem;
+}
+
+@media (min-width: 720px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

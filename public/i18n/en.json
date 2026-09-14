@@ -8,48 +8,55 @@
   },
   "hero": {
     "title": {
-      "prefix": "We build software that"
+      "prefix": "Software that"
     },
-    "lead": "Innovation meets purpose. Technology should empower you, not hold you back.",
+    "lead": "Websites, automation, internal systems, and NFC chips that sell, save time, and grow with you. No fluff — results you can measure.",
     "cta": {
-      "primary": "START YOUR PROJECT"
+      "primary": "GET A QUOTE"
     }
   },
   "keyCompetencies": {
-    "title": "KEY COMPETENCIES",
+    "title": "WHAT YOU GET",
     "leftBody": {
       "parts": [
         {
-          "text": "In a world that evolves every second, moving forward with "
+          "text": "We don’t sell features. We deliver "
         },
         {
-          "text": "technology",
+          "text": "outcomes",
           "accent": "1"
         },
         {
-          "text": " is no longer optional — it is a "
+          "text": ": less friction, more "
         },
         {
-          "text": "necessity",
+          "text": "growth",
           "accent": "1"
+        },
+        {
+          "text": "."
         }
       ]
     },
-    "rightBody": "That's why TechnologicalCode exists: to empower modern businesses.",
+    "rightBody": "Custom software for teams that want to move faster.",
     "aria": "Key competencies narrative",
     "cardsRegion": "Services we offer",
     "cards": {
       "automation": {
         "title": "Automation",
-        "body": "We automate repetitive processes so your business runs without friction.\n\nFrom day-to-day tasks to full workflows, we reduce errors, save time,\nand let you focus on what really matters: growth."
+        "body": "Take repetitive work off your team: fewer errors, fewer lost hours.\n\nFrom a single task to a full workflow, so you can sell and decide."
       },
       "web": {
         "title": "Website",
-        "body": "We design and build modern, fast websites focused on conversion.\n\nThey don’t just look good — they’re built to attract customers,\nbuild trust, and represent your business at the highest level."
+        "body": "Fast sites built to convert — not just to look good.\n\nThey attract customers, build trust, and make it obvious why to choose you."
       },
       "internal": {
         "title": "Internal systems",
-        "body": "We build tailored systems that fit how you actually work.\n\nOrganize your information, streamline your processes, and make decisions\nwith tools built specifically for your business."
+        "body": "Tools that fit how you work — not the other way around.\n\nOrganize data, speed up processes, and decide with information you can use."
+      },
+      "nfc": {
+        "title": "NFC chips",
+        "body": "One tap and the customer lands on your menu, reviews, WhatsApp, or site.\n\nFor restaurants, shops, and events — no app, no line, no worn-out QR."
       }
     }
   },
@@ -58,27 +65,27 @@
     "leftBody": {
       "parts": [
         {
-          "text": "Internal systems with "
+          "text": "Systems that organize your operations and "
         },
         {
-          "text": "modern",
+          "text": "scale",
           "accent": "1"
         },
         {
-          "text": " structures and "
+          "text": " with you — without the "
         },
         {
-          "text": "scalability",
+          "text": "chaos",
           "accent": "1"
         }
       ]
     },
-    "rightBody": "Everything your business needs to take off",
+    "rightBody": "Less chaos. More control. Better decisions.",
     "showcase": {
-      "title": "With modern, futuristic models",
-      "subtitle": "For easier interaction",
-      "cta": "Contact us",
-      "note": "Keep your eyes on your business from anywhere",
+      "title": "Designed to be used, not just admired",
+      "subtitle": "Your team gets it from day one",
+      "cta": "Let’s talk",
+      "note": "Your operation, visible from anywhere",
       "collageImgAlt": "Dashboard and metrics preview"
     }
   },
@@ -88,53 +95,159 @@
     "title": {
       "parts": [
         {
-          "text": "With "
-        },
-        {
-          "text": "the evolution of AI",
-          "accent": "1"
-        },
-        {
-          "text": ", it's time for "
-        },
-        {
-          "text": "your business",
-          "accent": "1"
-        },
-        {
-          "text": " to "
-        },
-        {
-          "text": "evolve",
-          "accent": "1"
-        },
-        {
-          "text": " too."
-        }
-      ]
-    },
-    "body": {
-      "parts": [
-        {
-          "text": "Improve your business "
-        },
-        {
-          "text": "performance",
-          "accent": "1"
-        },
-        {
-          "text": " with the help of "
+          "text": "Let "
         },
         {
           "text": "AI",
           "accent": "1"
         },
         {
-          "text": " !LET'S WORK TOGETHER!"
+          "text": " do the heavy lifting. You "
+        },
+        {
+          "text": "run",
+          "accent": "1"
+        },
+        {
+          "text": " the business."
+        }
+      ]
+    },
+    "body": {
+      "parts": [
+        {
+          "text": "Automate the repetitive. Speed up what matters. "
+        },
+        {
+          "text": "Let’s build",
+          "accent": "1"
+        },
+        {
+          "text": " together."
         }
       ]
     },
     "cta": "Contact us"
+  },
+  "homeProjects": {
+    "aria": "Sample projects",
+    "title": "Projects",
+    "lead": "Open each demo and walk through what we deliver: landings and a mini store.",
+    "cta": "View project",
+    "items": {
+      "filo": {
+        "title": "Filo",
+        "tag": "Basic landing",
+        "body": "A barbershop in Barranco. Hero, services, WhatsApp, and a light, fast site."
+      },
+      "vertice": {
+        "title": "Vértice",
+        "tag": "Full landing",
+        "body": "An architecture studio. Motion, gallery, testimonials, and a contact form."
+      },
+      "miga": {
+        "title": "Miga",
+        "tag": "Mini store",
+        "body": "A bakery in Miraflores. Catalog, cart, and WhatsApp checkout."
+      }
+    }
+  },
+  "whyUs": {
+    "aria": "Why choose us",
+    "title": {
+      "parts": [
+        {
+          "text": "Why "
+        },
+        {
+          "text": "choose us",
+          "accent": "1"
+        }
+      ]
+    },
+    "body": {
+      "parts": [
+        {
+          "text": "At TechnologicalCode we combine AI with real developers to deliver your site "
+        },
+        {
+          "text": "in days, not months",
+          "accent": "1"
+        },
+        {
+          "text": ". We make sure it works from launch through everyday use: we fix any maintenance issue "
+        },
+        {
+          "text": "fast and without the runaround",
+          "accent": "1"
+        },
+        {
+          "text": ", and you’ll always know what’s in your plan — "
+        },
+        {
+          "text": "no hidden fees or surprises",
+          "accent": "1"
+        },
+        {
+          "text": " after delivery."
+        }
+      ]
+    },
+    "cards": {
+      "speed": {
+        "title": "Speed",
+        "body": "AI plus real developers. Your site ready in days, not months."
+      },
+      "care": {
+        "title": "Maintenance",
+        "body": "If something breaks, we fix it fast — no runaround. From launch to everyday use."
+      },
+      "price": {
+        "title": "Clear pricing",
+        "body": "You know what’s in your plan. No hidden fees or surprises after delivery."
+      }
+    }
+  },
+  "homePricing": {
+    "aria": "Our pricing",
+    "title": "Pricing",
+    "lead": "Starting ranges. The real scope is quoted for your project.",
+    "from": "From",
+    "featured": "Most requested",
+    "cta": "Get a quote",
+    "note": "Custom systems typically run USD 7,000–18,000 and take 2–5 months. NFC chips and extras are quoted separately.",
+    "plans": {
+      "landing": {
+        "name": "Web presence",
+        "amount": "USD 500",
+        "body": "A landing or short site built to look sharp and convert.",
+        "items": {
+          "a": "Page, WhatsApp, and a light load",
+          "b": "Ready in days, not months",
+          "c": "Maintenance after delivery"
+        }
+      },
+      "growth": {
+        "name": "Digital business",
+        "amount": "USD 2,500",
+        "body": "A fuller site or mini store with more flow.",
+        "items": {
+          "a": "Catalog, forms, or motion",
+          "b": "Built to sell, not just to show",
+          "c": "Scope locked in the quote"
+        }
+      },
+      "custom": {
+        "name": "Custom build",
+        "amount": "USD 7,000",
+        "body": "Internal systems, automation, CRM, or AI.",
+        "items": {
+          "a": "Fitted to how you already work",
+          "b": "Typical timeline of 2–5 months",
+          "c": "Final price follows complexity"
+        }
+      }
+    }
   },
   "hook": {
     "aria": "Hook section",
@@ -142,14 +255,14 @@
     "text": {
       "parts": [
         {
-          "text": "Work with us with "
+          "text": "Start with a plan that fits: "
         },
         {
-          "text": "different payment methods",
+          "text": "flexible payments",
           "accent": "1"
         },
         {
-          "text": " for our variety of services."
+          "text": " and a clear scope from day one."
         }
       ]
     }
@@ -250,27 +363,22 @@
     }
   },
   "cta": {
-    "title": "Let's build something powerful",
-    "lead": "Ready for your next project? Message us on WhatsApp.",
-    "whatsapp": "Contact on WhatsApp"
+    "title": "Tell us what you want to build",
+    "lead": "In a few minutes we’ll cover scope, timeline, and the next step. Message us on WhatsApp.",
+    "whatsapp": "Chat on WhatsApp"
   },
   "footer": {
-    "tagline": "High-end software engineering agency focused on obsidian-grade performance and architectural integrity.",
+    "tagline": "Software engineering for businesses that want fast, solid, custom-built systems.",
     "sitemap": "Sitemap",
-    "legal": "Legal",
-    "connection": "Connection",
     "link": {
       "services": "Services",
       "portfolio": "Portfolio",
-      "process": "Process",
-      "terms": "Terms",
-      "privacy": "Privacy",
-      "security": "Security",
-      "linkedin": "LinkedIn",
-      "github": "GitHub",
-      "contact": "Contact"
+      "projects": "Projects",
+      "why": "Why choose us",
+      "pricing": "Pricing",
+      "process": "Process"
     },
-    "copy": "© 2024 TechnologicalCode. Engineered for the Obsidian Pulse.",
+    "copy": "© 2026 TechnologicalCode. Engineered for the Obsidian Pulse.",
     "status": {
       "server": "Server: Frankfurt-01",
       "network": "Network: Secure"

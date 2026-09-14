@@ -15,9 +15,9 @@ import {
 } from '@angular/core';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { ActiveLanguage } from '../../../locale/active-language';
+import { isSectionEnteringViewport, SCROLL_REVEAL_IO, TYPEWRITER_MS } from '../../scroll-reveal';
 
 const LIFT_PX = 14;
-const TYPEWRITER_MS = 2000;
 
 /** `accent` en JSON debe ser string (p. ej. "1"): ngx-translate elimina booleanos en objetos anidados. */
 type LeftBodyPart = { text: string; accent?: boolean | string };
@@ -181,7 +181,7 @@ export class KeyCompetenciesSectionComponent {
           }
         }
       },
-      { root: null, threshold: 0.12, rootMargin: '0px 0px -6% 0px' },
+      SCROLL_REVEAL_IO,
     );
     this.sectionIo.observe(el);
   }
@@ -233,7 +233,7 @@ export class KeyCompetenciesSectionComponent {
           }
         }
       },
-      { root: null, threshold: 0.1, rootMargin: '0px 0px -8% 0px' },
+      { root: null, threshold: 0.04, rootMargin: '0px 0px 10% 0px' },
     );
     this.cardsIo.observe(el);
   }
@@ -258,7 +258,7 @@ export class KeyCompetenciesSectionComponent {
     }
     const rect = el.getBoundingClientRect();
     const vh = win.innerHeight;
-    const intersecting = rect.top < vh * 0.92 && rect.bottom > vh * 0.08;
+    const intersecting = isSectionEnteringViewport(rect, vh);
     if (intersecting) {
       this.cardsVisible.set(true);
       this.disconnectCardsObserver();

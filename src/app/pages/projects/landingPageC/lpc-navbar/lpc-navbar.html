@@ -1,0 +1,27 @@
+<header class="nav" [class.nav--solid]="solid()" [class.nav--open]="open()">
+  <div class="nav__inner">
+    <a class="brand" href="#lpc-inicio" (click)="go('lpc-inicio', $event)">
+      <span class="brand__mark" aria-hidden="true">V</span>
+      Vértice
+    </a>
+
+    <button
+      class="burger"
+      type="button"
+      (click)="toggle()"
+      [attr.aria-expanded]="open()"
+      aria-controls="lpc-menu"
+    >
+      <span class="visually-hidden">Menú</span>
+      <span aria-hidden="true"></span>
+    </button>
+
+    <nav class="menu" id="lpc-menu">
+      <a href="#lpc-inicio" (click)="go('lpc-inicio', $event)">Inicio</a>
+      <a href="#lpc-estudio" (click)="go('lpc-estudio', $event)">Estudio</a>
+      <a href="#lpc-servicios" (click)="go('lpc-servicios', $event)">Servicios</a>
+      <a href="#lpc-obra" (click)="go('lpc-obra', $event)">Obra</a>
+      <a href="#lpc-contacto" (click)="go('lpc-contacto', $event)">Contacto</a>
+    </nav>
+  </div>
+</header>

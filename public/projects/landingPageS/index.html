@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Filo — barbería en Barranco. Cortes precisos, barba cuidada y reserva por WhatsApp."
+    />
+    <title>Filo · Barbería en Barranco</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Outfit:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#inicio">Saltar al contenido</a>
+
+    <!-- Header: logo + 3 anclas. En móvil se abre con el botón. -->
+    <header class="header" data-header>
+      <div class="header__inner">
+        <a class="brand" href="#inicio" aria-label="Filo — inicio">
+          <span class="brand__mark" aria-hidden="true">F</span>
+          <span class="brand__name">Filo</span>
+        </a>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          data-nav-toggle
+          aria-expanded="false"
+          aria-controls="site-nav"
+        >
+          <span class="nav-toggle__bars" aria-hidden="true"></span>
+          <span class="visually-hidden">Abrir menú</span>
+        </button>
+
+        <nav class="nav" id="site-nav" data-nav>
+          <a class="nav__link" href="#inicio">Inicio</a>
+          <a class="nav__link" href="#servicios">Servicios</a>
+          <a class="nav__link" href="#contacto">Contacto</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero: propuesta de valor + CTA WhatsApp -->
+      <section class="hero" id="inicio">
+        <div class="hero__media" aria-hidden="true">
+          <img
+            src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=1400&q=70"
+            alt=""
+            width="1400"
+            height="900"
+          />
+        </div>
+        <div class="hero__shade" aria-hidden="true"></div>
+        <div class="hero__copy">
+          <p class="eyebrow">Barranco · Lima</p>
+          <h1 class="hero__title">Tu mejor cara. En cuarenta minutos.</h1>
+          <p class="hero__lead">
+            Cortes precisos, barba cuidada y hora por WhatsApp. Tres sillas, un equipo chico y cero teatro.
+          </p>
+          <a
+            class="btn btn--whatsapp"
+            href="https://wa.me/51987654321?text=Hola,%20quiero%20más%20información"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                fill="currentColor"
+                d="M20.5 3.5A11 11 0 0 0 2.1 17.2L1 23l5.9-1.1A11 11 0 0 0 20.5 3.5zm-8.5 17a9.1 9.1 0 0 1-4.6-1.3l-.3-.2-3.5.7.7-3.4-.2-.3A9.1 9.1 0 1 1 12 20.5zm5-6.8c-.3-.1-1.6-.8-1.8-.9s-.4-.1-.6.2-.7.9-.8 1-.3.2-.6 0a7.4 7.4 0 0 1-2.2-1.4 8.2 8.2 0 0 1-1.5-1.9c-.2-.3 0-.4.1-.6l.4-.5.1-.3c0-.1 0-.3 0-.4s-.6-1.4-.8-1.9-.4-.4-.6-.4h-.5c-.2 0-.4.1-.6.3s-.8.8-.8 1.9.8 2.2.9 2.3 1.6 2.5 3.9 3.5c.5.2 1 .4 1.3.5.6.2 1.1.1 1.5.1.5-.1 1.6-.6 1.8-1.3.2-.6.2-1.2.1-1.3s-.2-.2-.5-.3z"
+              />
+            </svg>
+            Escríbenos por WhatsApp
+          </a>
+        </div>
+      </section>
+
+      <!-- Quiénes somos: 2–3 líneas, sin relleno. -->
+      <section class="about" id="nosotros">
+        <div class="wrap about__grid">
+          <div class="about__text">
+            <p class="eyebrow">Quiénes somos</p>
+            <h2 class="section-title">Oficio de barrio, estándar de estudio.</h2>
+            <p>
+              En Filo cortamos con calma y criterio: te escuchamos, te proponemos y te vamos. Abrimos en
+              Barranco para que reservar un buen corte sea tan simple como mandar un mensaje.
+            </p>
+          </div>
+          <figure class="about__photo">
+            <img
+              src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=900&q=70"
+              alt="Barbero de Filo trabajando un fade"
+              width="900"
+              height="1100"
+              loading="lazy"
+              decoding="async"
+            />
+          </figure>
+        </div>
+      </section>
+
+      <!-- Servicios: 4 tarjetas. Edita título y texto aquí. -->
+      <section class="services" id="servicios">
+        <div class="wrap">
+          <p class="eyebrow">Servicios</p>
+          <h2 class="section-title">Lo que hacemos, sin menú eterno.</h2>
+          <ul class="cards">
+            <li class="card">
+              <span class="card__icon" aria-hidden="true">01</span>
+              <h3>Corte clásico</h3>
+              <p>Tijera y peinado. Un corte que se ve bien el día 12, no solo el día 1.</p>
+            </li>
+            <li class="card">
+              <span class="card__icon" aria-hidden="true">02</span>
+              <h3>Fade y diseño</h3>
+              <p>Degradados limpios, líneas precisas. Te decimos qué le queda a tu cara.</p>
+            </li>
+            <li class="card">
+              <span class="card__icon" aria-hidden="true">03</span>
+              <h3>Barba y afeitado</h3>
+              <p>Perfilado, toalla caliente y navaja. La barba deja de ser un trámite.</p>
+            </li>
+            <li class="card">
+              <span class="card__icon" aria-hidden="true">04</span>
+              <h3>Ritual completo</h3>
+              <p>Corte + barba + cejas. Sales listo. Reserva el bloque de 60 minutos.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Testimonios ficticios (demo). -->
+      <section class="quotes" aria-label="Opiniones de clientes">
+        <div class="wrap quotes__grid">
+          <blockquote class="quote">
+            <p>“Salí distinto. El fade quedó exacto y no tuve que explicar el mismo corte tres veces.”</p>
+            <footer>
+              <span class="quote__avatar" aria-hidden="true">MR</span>
+              <cite>Mateo R.</cite>
+            </footer>
+          </blockquote>
+          <blockquote class="quote">
+            <p>“Pedí hora por WhatsApp y en veinte minutos ya tenía silla. Así debería ser siempre.”</p>
+            <footer>
+              <span class="quote__avatar" aria-hidden="true">AV</span>
+              <cite>Andrea V.</cite>
+            </footer>
+          </blockquote>
+        </div>
+      </section>
+
+      <!-- CTA final: mismo WhatsApp, cierre. -->
+      <section class="close" id="contacto">
+        <div class="wrap close__box">
+          <p class="eyebrow">Contacto</p>
+          <h2 class="section-title">¿Listo para reservar? Escríbenos ahora.</h2>
+          <p class="close__lead">Av. Grau 512, Barranco. Lun–Sáb 10:00–20:00 · Dom 11:00–16:00.</p>
+          <a
+            class="btn btn--whatsapp"
+            href="https://wa.me/51987654321?text=Hola,%20quiero%20más%20información"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                fill="currentColor"
+                d="M20.5 3.5A11 11 0 0 0 2.1 17.2L1 23l5.9-1.1A11 11 0 0 0 20.5 3.5zm-8.5 17a9.1 9.1 0 0 1-4.6-1.3l-.3-.2-3.5.7.7-3.4-.2-.3A9.1 9.1 0 1 1 12 20.5zm5-6.8c-.3-.1-1.6-.8-1.8-.9s-.4-.1-.6.2-.7.9-.8 1-.3.2-.6 0a7.4 7.4 0 0 1-2.2-1.4 8.2 8.2 0 0 1-1.5-1.9c-.2-.3 0-.4.1-.6l.4-.5.1-.3c0-.1 0-.3 0-.4s-.6-1.4-.8-1.9-.4-.4-.6-.4h-.5c-.2 0-.4.1-.6.3s-.8.8-.8 1.9.8 2.2.9 2.3 1.6 2.5 3.9 3.5c.5.2 1 .4 1.3.5.6.2 1.1.1 1.5.1.5-.1 1.6-.6 1.8-1.3.2-.6.2-1.2.1-1.3s-.2-.2-.5-.3z"
+              />
+            </svg>
+            Escríbenos por WhatsApp
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap footer__row">
+        <p class="footer__name">Filo</p>
+        <div class="footer__social" aria-label="Redes">
+          <a href="#" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.6" />
+              <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6" />
+              <circle cx="17.2" cy="6.8" r="1" fill="currentColor" />
+            </svg>
+          </a>
+          <a href="#" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                fill="currentColor"
+                d="M14.2 3h2.3c.2 1.8 1.3 3.3 3.2 3.8v2.3c-1.2 0-2.3-.4-3.2-1v6.4a6.4 6.4 0 1 1-6.4-6.4c.2 0 .5 0 .7.1v2.5a3.9 3.9 0 1 0 2.7 3.7V3z"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <p class="footer__credit">
+        Página desarrollada por
+        <a href="/" rel="home">TechnologicalCode</a>
+      </p>
+    </footer>
+
+    <!-- Botón flotante: visible en todo el scroll. Cambia el número aquí. -->
+    <a
+      class="wa-float"
+      href="https://wa.me/51987654321?text=Hola,%20quiero%20más%20información"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Escribir a Filo por WhatsApp"
+    >
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path
+          fill="currentColor"
+          d="M20.5 3.5A11 11 0 0 0 2.1 17.2L1 23l5.9-1.1A11 11 0 0 0 20.5 3.5zm-8.5 17a9.1 9.1 0 0 1-4.6-1.3l-.3-.2-3.5.7.7-3.4-.2-.3A9.1 9.1 0 1 1 12 20.5zm5-6.8c-.3-.1-1.6-.8-1.8-.9s-.4-.1-.6.2-.7.9-.8 1-.3.2-.6 0a7.4 7.4 0 0 1-2.2-1.4 8.2 8.2 0 0 1-1.5-1.9c-.2-.3 0-.4.1-.6l.4-.5.1-.3c0-.1 0-.3 0-.4s-.6-1.4-.8-1.9-.4-.4-.6-.4h-.5c-.2 0-.4.1-.6.3s-.8.8-.8 1.9.8 2.2.9 2.3 1.6 2.5 3.9 3.5c.5.2 1 .4 1.3.5.6.2 1.1.1 1.5.1.5-.1 1.6-.6 1.8-1.3.2-.6.2-1.2.1-1.3s-.2-.2-.5-.3z"
+        />
+      </svg>
+    </a>
+
+    <script src="script.js"></script>
+  </body>
+</html>

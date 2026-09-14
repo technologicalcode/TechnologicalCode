@@ -1,0 +1,20 @@
+<section class="gallery" id="lpc-obra">
+  <div class="wrap">
+    <p class="kicker">Obra</p>
+    <h2>Una selección reciente.</h2>
+    <div class="grid">
+      @for (shot of shots; track shot.src) {
+        <button class="shot" type="button" (click)="open(shot)">
+          <img [src]="shot.src" [alt]="shot.alt" width="800" height="640" loading="lazy" decoding="async" />
+        </button>
+      }
+    </div>
+  </div>
+
+  @if (active(); as shot) {
+    <div class="lite" role="dialog" aria-modal="true" [attr.aria-label]="shot.alt" (click)="close()">
+      <img [src]="shot.src" [alt]="shot.alt" (click)="$event.stopPropagation()" />
+      <button class="lite__x" type="button" (click)="close()">Cerrar</button>
+    </div>
+  }
+</section>
