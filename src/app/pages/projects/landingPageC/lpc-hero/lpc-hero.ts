@@ -38,10 +38,10 @@ export class LpcHeroComponent {
     const root = this.host.nativeElement;
     const ctx = gsap.context(() => {
       // Tiempos de entrada del hero: título 1.1s, lead 0.9s, CTA 0.75s
-      gsap.from('.lpc-hero__kicker', { y: 18, opacity: 0, duration: 0.7, ease: 'power3.out' });
-      gsap.from('.lpc-hero__title', { y: 42, opacity: 0, duration: 1.1, delay: 0.08, ease: 'power3.out' });
-      gsap.from('.lpc-hero__lead', { y: 24, opacity: 0, duration: 0.9, delay: 0.2, ease: 'power2.out' });
-      gsap.from('.lpc-hero__cta', { y: 16, opacity: 0, duration: 0.75, delay: 0.34, ease: 'power2.out' });
+      gsap.from('.lpc-hero__kicker', { y: 18, autoAlpha: 0, duration: 0.7, ease: 'power3.out' });
+      gsap.from('.lpc-hero__title', { y: 42, autoAlpha: 0, duration: 1.1, delay: 0.08, ease: 'power3.out' });
+      gsap.from('.lpc-hero__lead', { y: 24, autoAlpha: 0, duration: 0.9, delay: 0.2, ease: 'power2.out' });
+      gsap.from('.lpc-hero__cta', { y: 16, autoAlpha: 0, duration: 0.75, delay: 0.34, ease: 'power2.out' });
     }, root);
     this.destroyRef.onDestroy(() => ctx.revert());
   }

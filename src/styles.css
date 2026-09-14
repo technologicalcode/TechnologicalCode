@@ -118,6 +118,13 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* Demo Vértice: no heredar el fondo/tema del sitio mientras está abierta */
+html.lpc-demo,
+html.lpc-demo body {
+  background-color: #f3eee6;
+  color: #161310;
+}
+
 /* Header sobre #portfolio: sólido negro (light) / blanco (dark); estilos globales por presupuesto del CSS del header */
 html[data-theme='light'] app-header .header.header--portfolio-zone {
   border-bottom-color: rgb(255 255 255 / 0.12);

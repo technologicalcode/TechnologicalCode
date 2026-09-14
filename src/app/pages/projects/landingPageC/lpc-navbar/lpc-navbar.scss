@@ -47,6 +47,11 @@
   text-decoration: none;
   font-family: var(--lpc-serif);
   font-size: 1.45rem;
+  color: #f6f1ea;
+}
+
+.nav--solid .brand {
+  color: var(--lpc-ink);
 }
 
 .brand__mark {
@@ -69,17 +74,30 @@
   font-size: 0.82rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--lpc-muted);
+  color: rgb(246 241 234 / 0.78);
 }
 
 .menu a:hover {
+  color: #fff;
+}
+
+.nav--solid .menu a {
+  color: var(--lpc-muted);
+}
+
+.nav--solid .menu a:hover {
   color: var(--lpc-ink);
 }
 
 .burger {
   width: 2.5rem;
   height: 2.5rem;
-  border: 1px solid var(--lpc-line);
+  border: 1px solid rgb(246 241 234 / 0.28);
+  background: rgb(22 19 16 / 0.28);
+}
+
+.nav--solid .burger {
+  border-color: var(--lpc-line);
   background: rgb(243 238 230 / 0.7);
 }
 
@@ -90,8 +108,14 @@
   width: 1.05rem;
   height: 1.5px;
   margin-inline: auto;
-  background: var(--lpc-ink);
+  background: #f6f1ea;
   content: '';
+}
+
+.nav--solid .burger span:last-child,
+.nav--solid .burger span:last-child::before,
+.nav--solid .burger span:last-child::after {
+  background: var(--lpc-ink);
 }
 
 .burger span:last-child::before {
@@ -110,6 +134,16 @@
   padding: 1rem 1.25rem 1.3rem;
   background: var(--lpc-bg);
   border-bottom: 1px solid var(--lpc-line);
+}
+
+@media (max-width: 799px) {
+  .nav--open .menu a {
+    color: var(--lpc-muted);
+  }
+
+  .nav--open .menu a:hover {
+    color: var(--lpc-ink);
+  }
 }
 
 @media (min-width: 800px) {

@@ -17,6 +17,7 @@ const FONT_HREF =
 
 @Component({
   selector: 'app-landing-page-c',
+  standalone: true,
   imports: [
     LpcNavbarComponent,
     LpcHeroComponent,
@@ -38,7 +39,28 @@ export class LandingPageCComponent {
   private readonly destroyRef = inject(DestroyRef);
 
   constructor() {
-    afterNextRender(() => this.injectFonts());
+    afterNextRender(() => {
+      this.injectFonts();
+      this.lockPageChrome();
+    });
+  }
+
+  /** Evita que el tema/padding del sitio principal se cuele en esta demo. */
+  private lockPageChrome(): void {
+    if (!isPlatformBrowser(this.platformId)) {
+      return;
+    }
+    const html = this.doc.documentElement;
+    const prevScheme = html.style.colorScheme;
+    const prevPad = html.style.scrollPaddingTop;
+    html.classList.add('lpc-demo');
+    html.style.colorScheme = 'light';
+    html.style.scrollPaddingTop = '5rem';
+    this.destroyRef.onDestroy(() => {
+      html.classList.remove('lpc-demo');
+      html.style.colorScheme = prevScheme;
+      html.style.scrollPaddingTop = prevPad;
+    });
   }
 
   private injectFonts(): void {

@@ -23,6 +23,8 @@
 
 .about h2 {
   margin: 0 0 1rem;
+  font-family: var(--lpc-serif);
+  font-weight: 500;
   font-size: clamp(2rem, 5vw, 3.2rem);
 }
 
